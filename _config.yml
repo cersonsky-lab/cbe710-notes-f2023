@@ -1,0 +1,19 @@
+# In _config.yml
+title: Advanced Thermodynamics for Chemical Engineers
+author: Reid van Lehn, Matt Gebbie, Rose K. Cersonsky 
+# logo: logo.png
+execute:
+  execute_notebooks: force
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles: "references.bib"
+parse:
+   myst_url_schemes: [mailto, http, https]
+
+sphinx:
+  config:
+    myst_heading_anchors: 3
+
+exclude_patterns : [playground]
+
+only_build_toc_files        : true

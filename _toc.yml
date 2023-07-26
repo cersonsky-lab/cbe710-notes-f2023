@@ -1,0 +1,49 @@
+format: jb-book
+root: intro
+parts:
+  - caption: Before we get started
+    chapters:
+        - file: lecture_files/Lecture1A
+        - file: lecture_files/Lecture1B
+  - caption: Statistical Mechanics
+    chapters:
+        - file: lecture_files/Lecture2
+        - file: lecture_files/Lecture3
+        - file: lecture_files/Lecture4
+        - file: lecture_files/Lecture5
+        - file: lecture_files/Lecture6
+        - file: lecture_files/Lecture7
+        - file: lecture_files/Lecture8A
+        - file: lecture_files/Lecture8B
+        - file: lecture_files/Lecture9A
+  - caption: Molecular Simulation
+    chapters:
+        - file: lecture_files/Lecture9B
+        - file: lecture_files/Lecture10
+        - file: lecture_files/Lecture11
+        - file: lecture_files/Lecture12A
+        - file: lecture_files/Lecture12B
+        - file: lecture_files/Lecture13
+        - file: lecture_files/Lecture14A
+        - file: lecture_files/Lecture14B
+        - file: lecture_files/Lecture15
+  - caption: Thermodynamics
+    chapters:
+        - file: lecture_files/Lecture16
+        - file: lecture_files/Lecture17
+        - file: lecture_files/Lecture18
+        - file: lecture_files/Lecture19
+        - file: lecture_files/Lecture20
+        - file: lecture_files/Lecture21
+        - file: lecture_files/Lecture22
+        - file: lecture_files/Lecture23
+        - file: lecture_files/Lecture24
+        - file: lecture_files/Lecture25
+        - file: lecture_files/Lecture26
+  - caption: Appendices
+    chapters:
+      - file: appendices/notation
+      - file: appendices/thermo_pot 
+      - file: appendices/expansion 
+      - file: appendices/euler 
+      - file: appendices/references
