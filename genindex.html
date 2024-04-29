@@ -1,0 +1,907 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index &#8212; Advanced Thermodynamics for Chemical Engineers</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Advanced Thermodynamics for Chemical Engineers</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Class introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Before we get started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture1A.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture1B.html">Review of thermodynamics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture2.html">Postulates of statistical mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture3.html">Application of the microcanonical ensemble: two-state system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture4.html">The canonical ensemble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture5.html">Generalized ensembles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture6.html">The ideal gas partition function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture7.html">Application of independent subsystems: the Langmuir isotherm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture8A.html">The Ising model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture8B.html">Mean-field theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture9A.html">Fluctuations and thermodynamic response functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics Problem Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="problems/ps_1/problem_set_1.html">Problem Set 1 (Due Wednesday, September 20, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems/ps_2/problem_set_2.html">Problem Set 2 (Due Wednesday, September 27, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems/ps_3/problem_set_3.html">Problem Set 3 (Due Monday, October 9, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Molecular Simulation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture9B.html">An introduction to molecular simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture10.html">Monte Carlo simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture11.html">Nuances of stochastic sampling in statistical ensembles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture12A.html">Molecular dynamics simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture12B.html">Temperature and velocities in MD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture13.html">Distribution of particles in states of matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture14A.html">The potential of mean force</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture14B.html">Umbrella Sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture15.html">Free energy perturbation and thermodynamic integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Molecular Simulation Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="problems/simulation_project.html">Simulation Project (Due Monday, November 6, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture16.html">Postulates of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture17.html">Heat engines and possible processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture18.html">The Carnot Cycle and the Theorem of Clausius</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture19.html">The fundamental relation of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture20.html">Legendre transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture21.html">Conditions of equilibrium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture22.html">Equilibrium in single-component systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture23.html">Phase diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture24.html">Fugacity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture25.html">Ideal mixtures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_files/Lecture26.html">Non-ideal mixtures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics Problem Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="problems/ps_4/problem_set_4.html">Problem Set 4 (Due Wednesday, November 22, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems/ps_5/problem_set_5.html">Problem Set 5 (Due Wednesday, November 29, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems/ps_6/problem_set_6.html">Problem Set 6 (Due Wednesday, December 6, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="appendices/notation.html">Additional Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendices/thermo_pot.html">Summary of thermodynamic potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendices/expansion.html">Derivation of expansion rule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendices/euler.html">Derivation of Euler integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendices/references.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#K"><strong>K</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture4.html#term-a-repeat-definition-of-the-canonical-ensemble"><strong>a repeat definition of the canonical ensemble</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture26.html#term-activity"><strong>activity</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture26.html#term-activity-coefficient"><strong>activity coefficient</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture16.html#term-adiabatic-work-interaction"><strong>adiabatic work interaction</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-Adiabatic-Insulated"><strong>Adiabatic/Insulated</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture12B.html#term-Andersen-thermostat"><strong>Andersen thermostat</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture23.html#term-binodal"><strong>binodal</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture4.html#term-Boltzmann-factor-Boltzmann-weight"><strong>Boltzmann factor / Boltzmann weight</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture9B.html#term-bonded-interactions"><strong>bonded interactions</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture1B.html#term-boundaries"><strong>boundaries</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture26.html#term-bubble-line"><strong>bubble line</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture26.html#term-bubble-point"><strong>bubble point</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture2.html#term-canonical-ensemble"><strong>canonical ensemble</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture4.html#term-canonical-partition-function"><strong>canonical partition function</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture18.html#term-Carnot-cycle"><strong>Carnot cycle</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture21.html#term-Chain-rule-to-add-another-variable"><strong>Chain rule to add another variable</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-Chemical-equilibrium"><strong>Chemical equilibrium</strong></a>
+</li>
+      <li><a href="appendices/notation.html#term-chemical-equilibrium"><strong>chemical equilibrium</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture6.html#term-classical-limit"><strong>classical limit</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-Closed"><strong>Closed</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture23.html#term-coexistence-curves"><strong>coexistence curves</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture14A.html#term-collective-variable"><strong>collective variable</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture26.html#term-common-tangent-line"><strong>common tangent line</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture16.html#term-composite-system"><strong>composite system</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture23.html#term-compressibility-factor"><strong>compressibility factor</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture13.html#term-configurational-distribution"><strong>configurational distribution</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture23.html#term-critical-point"><strong>critical point</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture8A.html#term-Curie-temperature"><strong>Curie-temperature</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture9B.html#term-Debye-force"><strong>Debye force</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture2.html#term-degeneracy"><strong>degeneracy</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture2.html#term-density-of-states"><strong>density of states</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture23.html#term-departure-function"><strong>departure function</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture23.html#term-departure-functions"><strong>departure functions</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture16.html#term-derived-property"><strong>derived property</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture11.html#term-detailed-balance"><strong>detailed balance</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture26.html#term-dew-line"><strong>dew line</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture22.html#term-dew-point"><strong>dew point</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-Diathermal"><strong>Diathermal</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture3.html#term-distinguishable"><strong>distinguishable</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture17.html#term-efficiency"><strong>efficiency</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture2.html#term-ensemble"><strong>ensemble</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture2.html#term-ensemble-average"><strong>ensemble average</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture17.html#term-enthalpy"><strong>enthalpy</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture2.html#term-entropy"><strong>entropy</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-environment"><strong>environment</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture19.html#term-equations-of-state"><strong>equations of state</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture16.html#term-equilibrium"><strong>equilibrium</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture23.html#term-equilibrium-criterion"><strong>equilibrium criterion</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture16.html#term-equilibrium-state"><strong>equilibrium state</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture6.html#term-equipartition-theorem"><strong>equipartition theorem</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture21.html#term-Euler-s-theorem"><strong>Euler&#39;s theorem</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture16.html#term-event"><strong>event</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture26.html#term-excess-property"><strong>excess property</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-Extensive"><strong>Extensive</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture10.html#term-finite-size-effects"><strong>finite size effects</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-first-law-of-thermodynamics"><strong>first law of thermodynamics</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture22.html#term-first-order-phase-transition"><strong>first-order phase transition</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture15.html#term-free-energy-perturbation"><strong>free energy perturbation</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture24.html#term-fugacity"><strong>fugacity</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture24.html#term-fugacity-coefficient"><strong>fugacity coefficient</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture25.html#term-fugacity-of-a-component-in-a-mixture"><strong>fugacity of a component in a mixture</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture5.html#term-generalized-ensemble"><strong>generalized ensemble</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture13.html#term-generic-reduced-configurational-distribution"><strong>generic reduced configurational distribution</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture21.html#term-Gibbs-Duhem-equation"><strong>Gibbs-Duhem equation</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture2.html#term-grand-canonical-ensemble"><strong>grand canonical ensemble</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture9B.html#term-hard-particle-interaction"><strong>hard-particle interaction</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture16.html#term-heat"><strong>heat</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture9A.html#term-heat-capacity"><strong>heat capacity</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture17.html#term-heat-engine"><strong>heat engine</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture25.html#term-ideal-solution"><strong>ideal solution</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture25.html#term-ideal-gas-mixture"><strong>ideal-gas mixture</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture11.html#term-importance-sampling"><strong>importance sampling</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture3.html#term-indistinguishable"><strong>indistinguishable</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-Intensive"><strong>Intensive</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture16.html#term-interaction"><strong>interaction</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture21.html#term-Inversion-of-derivatives"><strong>Inversion of derivatives</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture8A.html#term-Ising-model"><strong>Ising model</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-Isolated"><strong>Isolated</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture2.html#term-isothermal-isobaric-ensemble"><strong>isothermal-isobaric ensemble</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="K">K</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture9B.html#term-Keesom-interactions"><strong>Keesom interactions</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture7.html#term-Langmuir-adsorption-isotherm"><strong>Langmuir adsorption isotherm</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture9B.html#term-Lennard-Jones-potential"><strong>Lennard-Jones potential</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture26.html#term-limits-of-stability"><strong>limits of stability</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture9B.html#term-London-dispersion-forces"><strong>London dispersion forces</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture9B.html#term-long-range-Coulombic-potential"><strong>long-range Coulombic potential</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture2.html#term-macrostate"><strong>macrostate</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture9B.html#term-many-body-interaction"><strong>many-body interaction</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture11.html#term-Markov-chain-of-states"><strong>Markov chain of states</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture21.html#term-Maxwell-reciprocity"><strong>Maxwell reciprocity</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture21.html#term-Maxwell-relation"><strong>Maxwell relation</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture12B.html#term-Maxwell-Boltzmann-distribution-for-velocities"><strong>Maxwell-Boltzmann distribution for velocities</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture14A.html#term-mean-force"><strong>mean force</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture8B.html#term-mean-field-theory"><strong>mean-field theory</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture1B.html#term-Mechanical-equilibrium"><strong>Mechanical equilibrium</strong></a>
+</li>
+      <li><a href="appendices/notation.html#term-mechanical-equilibrium"><strong>mechanical equilibrium</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture23.html#term-Metastable"><strong>Metastable</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture11.html#term-Metropolis-Hastings-algorithm"><strong>Metropolis-Hastings algorithm</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture2.html#term-microcanonical-ensemble"><strong>microcanonical ensemble</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture2.html#term-microstate"><strong>microstate</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture9B.html#term-molecular-dynamics-simulations"><strong>molecular dynamics simulations</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture9B.html#term-Monte-Carlo-simulations"><strong>Monte Carlo simulations</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-Movable"><strong>Movable</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture1B.html#term-natural-variables"><strong>natural variables</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture9B.html#term-non-bonded-interactions"><strong>non-bonded interactions</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture1B.html#term-Open"><strong>Open</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture8A.html#term-order-disorder-transition"><strong>order-disorder transition</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture13.html#term-pair-correlation-function"><strong>pair-correlation function</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture9B.html#term-pairwise-interaction"><strong>pairwise interaction</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture25.html#term-partial-molar-property"><strong>partial molar property</strong></a>
+</li>
+      <li><a href="appendices/notation.html#term-partial-molar-property"><strong>partial molar property,</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture10.html#term-periodic-boundary-conditions"><strong>periodic boundary conditions</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture23.html#term-phase-envelope"><strong>phase envelope</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture16.html#term-Postulate-0"><strong>Postulate 0</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture16.html#term-Postulate-1"><strong>Postulate 1</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture16.html#term-Postulate-2"><strong>Postulate 2</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture16.html#term-Postulate-3"><strong>Postulate 3</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture16.html#term-Postulate-4"><strong>Postulate 4</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture14A.html#term-potential-of-mean-force"><strong>potential of mean force</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture16.html#term-primitive-property"><strong>primitive property</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture16.html#term-process"><strong>process</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture13.html#term-radial-distribution-function"><strong>radial distribution function</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture26.html#term-Raoult-s-Law"><strong>Raoult&#39;s Law</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture14A.html#term-reaction-corrdinate"><strong>reaction corrdinate</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture13.html#term-reduced-configurational-distribution"><strong>reduced configurational distribution</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture16.html#term-restraint"><strong>restraint</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture17.html#term-reversible-cycle"><strong>reversible cycle</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture17.html#term-reversible-heat-engine"><strong>reversible heat engine</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-Rigid"><strong>Rigid</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture22.html#term-saturation-pressure"><strong>saturation pressure</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture8B.html#term-self-consistent-mean-field-theory"><strong>self-consistent mean-field theory</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture16.html#term-simple-system"><strong>simple system</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture23.html#term-spinodal"><strong>spinodal</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture23.html#term-stability-criterion"><strong>stability criterion</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture23.html#term-Stable-equilibrium"><strong>Stable equilibrium</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture16.html#term-stable-phase"><strong>stable phase</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-state-function"><strong>state function</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-surroundings"><strong>surroundings</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-system"><strong>system</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture21.html#term-The-expansion-rule"><strong>The expansion rule</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture1B.html#term-Thermal-equilibrium"><strong>Thermal equilibrium</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture16.html#term-thermal-equilibrium"><strong>thermal equilibrium</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture12B.html#term-thermostat"><strong>thermostat</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture18.html#term-Theroem-of-Clausius"><strong>Theroem of Clausius</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture26.html#term-tie-line"><strong>tie line</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture23.html#term-triple-point"><strong>triple point</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture21.html#term-Triple-product-rule"><strong>Triple product rule</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture14B.html#term-umbrella-sampling"><strong>umbrella sampling</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture22.html#term-vapor-pressure"><strong>vapor pressure</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture26.html#term-vapor-liquid-equilibrium"><strong>vapor-liquid equilibrium</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture12A.html#term-Velocity-Verlet-algorithm"><strong>Velocity-Verlet algorithm</strong></a>
+</li>
+      <li><a href="lecture_files/Lecture12A.html#term-Verlet-algorithm"><strong>Verlet algorithm</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture16.html#term-work"><strong>work</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lecture_files/Lecture17.html#term-work-reservoir"><strong>work reservoir</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Reid van Lehn, Matt Gebbie, Rose K. Cersonsky
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1040 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>The canonical ensemble &#8212; Advanced Thermodynamics for Chemical Engineers</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture_files/Lecture4';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Generalized ensembles" href="Lecture5.html" />
+    <link rel="prev" title="Application of the microcanonical ensemble: two-state system" href="Lecture3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Advanced Thermodynamics for Chemical Engineers</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Class introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Before we get started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture1A.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture1B.html">Review of thermodynamics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture2.html">Postulates of statistical mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture3.html">Application of the microcanonical ensemble: two-state system</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The canonical ensemble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture5.html">Generalized ensembles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture6.html">The ideal gas partition function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture7.html">Application of independent subsystems: the Langmuir isotherm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture8A.html">The Ising model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture8B.html">Mean-field theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture9A.html">Fluctuations and thermodynamic response functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics Problem Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_1/problem_set_1.html">Problem Set 1 (Due Wednesday, September 20, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_2/problem_set_2.html">Problem Set 2 (Due Wednesday, September 27, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_3/problem_set_3.html">Problem Set 3 (Due Monday, October 9, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Molecular Simulation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture9B.html">An introduction to molecular simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture10.html">Monte Carlo simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture11.html">Nuances of stochastic sampling in statistical ensembles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture12A.html">Molecular dynamics simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture12B.html">Temperature and velocities in MD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture13.html">Distribution of particles in states of matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture14A.html">The potential of mean force</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture14B.html">Umbrella Sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture15.html">Free energy perturbation and thermodynamic integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Molecular Simulation Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problems/simulation_project.html">Simulation Project (Due Monday, November 6, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture16.html">Postulates of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture17.html">Heat engines and possible processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture18.html">The Carnot Cycle and the Theorem of Clausius</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture19.html">The fundamental relation of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture20.html">Legendre transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture21.html">Conditions of equilibrium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture22.html">Equilibrium in single-component systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture23.html">Phase diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture24.html">Fugacity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture25.html">Ideal mixtures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture26.html">Non-ideal mixtures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics Problem Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_4/problem_set_4.html">Problem Set 4 (Due Wednesday, November 22, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_5/problem_set_5.html">Problem Set 5 (Due Wednesday, November 29, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_6/problem_set_6.html">Problem Set 6 (Due Wednesday, December 6, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../appendices/notation.html">Additional Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/thermo_pot.html">Summary of thermodynamic potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/expansion.html">Derivation of expansion rule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/euler.html">Derivation of Euler integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/references.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lecture_files/Lecture4.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The canonical ensemble</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-readings-for-the-enthusiast">Additional Readings for the Enthusiast</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-for-today-s-lecture">Goals for today’s lecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-canonical-ensemble">Introduction to the canonical ensemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-canonical-partition-function">Derivation of canonical partition function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-the-canonical-ensemble-to-thermodynamics">Connecting the canonical ensemble to thermodynamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revisiting-the-two-state-system">Revisiting the two-state system</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-to-shared-notes">Link to Shared Notes</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-canonical-ensemble">
+<h1>The canonical ensemble<a class="headerlink" href="#the-canonical-ensemble" title="Link to this heading">#</a></h1>
+<section id="additional-readings-for-the-enthusiast">
+<h2>Additional Readings for the Enthusiast<a class="headerlink" href="#additional-readings-for-the-enthusiast" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span id="id1">Chandler [<a class="reference internal" href="../appendices/references.html#id2" title="David Chandler. Introduction to Modern Statistical Mechanics. Oxford University Press, New York, 1st edition edition, September 1987. ISBN 978-0-19-504277-1. URL: http://pcossgroup.xmu.edu.cn/old/users/xlu/group/courses/apc/imsm_chandler.pdf.">1</a>]</span> Chapter 3.3-3.4</p></li>
+</ul>
+</section>
+<section id="goals-for-today-s-lecture">
+<h2>Goals for today’s lecture<a class="headerlink" href="#goals-for-today-s-lecture" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>How do we describe systems with fluctuating or non-constant energy?</p></li>
+<li><p>How does the breaking the principle of equal a priori change the likelihood of different microstates?</p></li>
+<li><p>What is a partition function?</p></li>
+</ul>
+</section>
+<section id="introduction-to-the-canonical-ensemble">
+<h2>Introduction to the canonical ensemble<a class="headerlink" href="#introduction-to-the-canonical-ensemble" title="Link to this heading">#</a></h2>
+<p>In principle, all calculations in statistical mechanics can be performed
+using the microcanonical ensemble by deriving relationships based on a
+fixed set of constant energy states. In practice, the microcanonical
+ensemble is often not convenient because in many cases the energy of the
+system is not fixed.</p>
+<p>For example, most laboratory experiments take place
+in environments in which the energy of the system is able to exchange
+with the environment; that is, the walls of the system are
+<a class="reference internal" href="Lecture1B.html#term-Diathermal"><span class="xref std std-term">diathermal</span></a>. <span class="math notranslate nohighlight">\(E\)</span> is therefore no longer a fixed quantity and instead
+varies between each microstate. At equilibrium, however, we know from
+thermodynamics that the temperature of the system will be equal to the
+temperature of the environment. It would therefore be ideal to have
+equations describing systems in which the temperature is fixed in each
+microstate due to this condition of equilibrium while the energy is
+allowed to vary.</p>
+<dl class="simple glossary">
+<dt id="term-a-repeat-definition-of-the-canonical-ensemble">a repeat definition of the canonical ensemble<a class="headerlink" href="#term-a-repeat-definition-of-the-canonical-ensemble" title="Link to this term">#</a></dt><dd><p>The ensemble for which all microstates have a fixed number of particles, volume, and
+temperature. Also known as the $<span class="math notranslate nohighlight">\(NVT\)</span>$ ensemble.</p>
+</dd>
+</dl>
+<p>As we will see, choosing the appropriate ensemble to describe
+a system of interest is essential in simplifying problem solutions.
+However, if we allow the energy to vary between each microstate then the
+probability that a system obtains a given state, <span class="math notranslate nohighlight">\(p_i\)</span>, is no longer a
+constant value - that is, <a class="reference internal" href="Lecture2.html#postulate-2-in-the-microcanonical-ensemble-all-microstates-are-equally-probable"><span class="std std-ref">Postulate 2</span></a> no longer applies. We thus will
+derive an expression for the probability of microstate <span class="math notranslate nohighlight">\(i\)</span> in order to
+calculate ensemble-average quantities for the <a class="reference internal" href="Lecture2.html#term-canonical-ensemble"><span class="xref std std-term">canonical ensemble</span></a>.</p>
+<p>Let us consider a system of interest that is contact with surroundings
+that we will refer to as the <strong>bath</strong>. The bath is significantly larger
+than the system of interest, so that the energy and number of particles
+in the bath are also much larger than the energy and number of particles
+in the system. Thermodynamic parameters associated with the system will
+be denoted with the subscript <span class="math notranslate nohighlight">\(S\)</span>, parameters associated with the bath
+will be denoted with the subscript <span class="math notranslate nohighlight">\(B\)</span>, and parameters associated with
+the total combination of system and bath will be denoted with the
+subscript <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p><img alt="image" src="../_images/fig_4_1-01-01.png" /></p>
+<p>We assume that the walls of the system prevent the
+exchange of particles and volume so that <span class="math notranslate nohighlight">\(N_S\)</span> and <span class="math notranslate nohighlight">\(V_S\)</span> are fixed;
+however, the energy, <span class="math notranslate nohighlight">\(E_S\)</span>, can exchange with the surrounding bath. At
+thermal equilibrium, the temperature of the bath and system are
+equivalent (<span class="math notranslate nohighlight">\(T_S = T_B \equiv T_T\)</span>).</p>
+<p>A physical realization of such a
+system would be a sealed box with conducting walls that allows heat to
+exchange with the outside environment. Finally, we assume that the
+<em>total</em> energy, <span class="math notranslate nohighlight">\(E_T\)</span>, of the bath plus the system is a constant (i.e.,
+exchanges of energy between the bath and system obey conservation of
+energy):</p>
+<div class="math notranslate nohighlight">
+\[E_T = E_S + E_B = \text{constant}\]</div>
+<p>The total combination of system and bath is isolated.</p>
+<div class="admonition-does-the-canonical-ensemble-refer-to-the-microstates-of-the-system-the-bath-or-both-combined admonition">
+<p class="admonition-title">Does the canonical ensemble refer to the microstates of the system, the bath, or both combined?</p>
+<details>
+  <summary><b></b>[Click for answer]</summary>
+  Microstates of the total
+isolated system belong to the microcanonical ensemble, but the energy of
+each of these microstates is partitioned between the system of
+interest and the bath. The canonical ensemble then refers to the
+ensemble of microstates describing the system of interest, in which the
+energy may vary between microstates in the ensemble.
+</details>
+</div>
+<p>We will now determine the
+probability <span class="math notranslate nohighlight">\(p_j\)</span> of observing a single microstate of the system, <span class="math notranslate nohighlight">\(j\)</span>,
+which has energy <span class="math notranslate nohighlight">\(E_j\)</span> (noting that there can be many possible
+microstates with the same energy - in fact, there is a microcanonical
+ensemble of microstates with the same energy! We use the subscript <span class="math notranslate nohighlight">\(j\)</span>
+to denote a single specific microstate - that is, a single arrangement
+of particles with a specific energy <span class="math notranslate nohighlight">\(E_j\)</span> out of the many possible
+microstates that would have the same energy).</p>
+<p>Here, it is useful to frame our experiment in terms of microcanonical ensembles.
+The set of microstates that correspond to <span class="math notranslate nohighlight">\(E_j\)</span> comprise a microcanonical ensemble
+(let’s call this <code class="docutils literal notranslate"><span class="pre">Ensemble</span> <span class="pre">J</span></code>),
+as their energy is equal (as well as <span class="math notranslate nohighlight">\(N\)</span> and <span class="math notranslate nohighlight">\(V\)</span>).
+The set of microstates for the <em>whole</em> system (bath + system of interest) comprise
+a microcanonical ensemble, as <span class="math notranslate nohighlight">\(E_T\)</span> is also constant.</p>
+<p>So, <strong>how many microstates exist within our isolated (total) system that are part
+of <code class="docutils literal notranslate"><span class="pre">Ensemble</span> <span class="pre">J</span></code>?</strong>
+You could imagine fixing the positions/energies of the
+<span class="math notranslate nohighlight">\(N_S\)</span> particles into microstate <span class="math notranslate nohighlight">\(j\)</span> and then counting all possible
+combinations of the positions/energies of the <span class="math notranslate nohighlight">\(N_B\)</span> remaining particles.</p>
+<p>This value is equal to the number of microstates of the
+<strong>bath</strong> that are possible for the given microstate of the <strong>system</strong>.
+Since the energy of the
+system is fixed and equal to <span class="math notranslate nohighlight">\(E_j\)</span>, the energy of the bath is also fixed
+and equal to <span class="math notranslate nohighlight">\(E_B=E_T-E_j\)</span>. Therefore, the bath at energy <span class="math notranslate nohighlight">\(E_B = E_T - E_j\)</span> also
+constitutes a microcanonical ensemble! Furthermore, our number of states is
+equal to the degeneracy of a bath microcanonical ensemble with energy
+<span class="math notranslate nohighlight">\(E_T-E_j\)</span>, or <span class="math notranslate nohighlight">\(\Omega(N_B,V_B,E_T-E_j)\)</span>.</p>
+<p>We could write a similar
+degeneracy for each possible microstate <span class="math notranslate nohighlight">\(j\)</span> of the system. Since the total
+isolated system is a microcanonical ensemble in which all microstates
+are equally probable, the probability of observing a single microstate
+of the system <span class="math notranslate nohighlight">\(j\)</span> is equal to the number of microstates of the total
+isolated system in which the system of interest is in microstate <span class="math notranslate nohighlight">\(j\)</span>
+divided by the total number of microstates of the combined isolated
+system.</p>
+<p>From the logic above, we can write the normalized probability of finding
+microstate <span class="math notranslate nohighlight">\(j\)</span> of the system in terms of the degeneracy of the bath as:</p>
+<div class="math notranslate nohighlight" id="equation-pj">
+<span class="eqno">(16)<a class="headerlink" href="#equation-pj" title="Link to this equation">#</a></span>\[\begin{split}p_j &amp;= \frac{\Omega(N_B, V_B, E_T-E_j)}{\sum_{\textrm{all microstates j}} \Omega(N_B, V_B, E_T-E_j)} \\
+&amp;= \frac{\Omega(N_B, V_B, E_T-E_j)}{C_1}\end{split}\]</div>
+<p>That is, the probability of finding a particular microstate in the
+<strong>canonical ensemble</strong> (of the system) is related to the degeneracy of a
+bath described by a <strong>microcanonical ensemble</strong> with energy <span class="math notranslate nohighlight">\(E_T-E_j\)</span>.
+We use the constant <span class="math notranslate nohighlight">\(C_1\)</span> to refer to the normalization factor in the
+denominator (this quantity will drop out later on in the derivation).</p>
+<p>We will proceed from here by relating the degeneracy of
+the bath microcanonical ensemble to the entropy (following our previous
+approach) and from there obtaining an expression for <span class="math notranslate nohighlight">\(p_j\)</span> that does not
+depend on any properties of the bath.</p>
+</section>
+<section id="derivation-of-canonical-partition-function">
+<h2>Derivation of canonical partition function<a class="headerlink" href="#derivation-of-canonical-partition-function" title="Link to this heading">#</a></h2>
+<p>We have just derived the equations for the canonical
+ensemble, or the ensemble in which every microstate is at the same
+number of particles, volume, and temperature (<span class="math notranslate nohighlight">\(NVT\)</span>). Unlike the
+microcanonical ensemble, the energy of each state can vary, and in
+addition the probability of finding a given state is not necessarily
+equal. We thus sought to derive the probability of observing a single
+state in the canonical ensemble, <span class="math notranslate nohighlight">\(p_j\)</span>, which has energy <span class="math notranslate nohighlight">\(E_j\)</span>.</p>
+<div class="admonition-why-is-there-not-a-one-to-one-correspondence-between-energy-and-microstates-in-the-canonical-ensemble admonition">
+<p class="admonition-title">Why is there not a one-to-one correspondence between energy and microstates in the canonical ensemble?</p>
+<details>
+  <summary><b></b>[Click for answer]</summary>
+<p>In general, many possible microstates could have the same
+energy but different microscopic configurations - thus, there is not a
+one-to-one correspondence between energies and microstates. We will
+eventually consider the probability of observing one of the many states
+that have the same energy <span class="math notranslate nohighlight">\(E_\nu\)</span> as opposed to the specific microstate
+<span class="math notranslate nohighlight">\(j\)</span>.</p>
+</details>
+</div>
+<p>As a reminder, here is our setup:</p>
+<p><img alt="image" src="../_images/fig_4_1-01-01.png" /></p>
+<p>We now seek to determine <span class="math notranslate nohighlight">\(p_j\)</span>. First, we
+recognize that the total combined system is isolated, so there is a
+microcanonical ensemble of microstates of the total combined system and
+the probability of each of these microstates is equal (according to the
+<a class="reference internal" href="Lecture2.html#postulate-2-in-the-microcanonical-ensemble-all-microstates-are-equally-probable"><span class="std std-ref">principle of equal a priori probabilities</span></a>).</p>
+<p>From the logic above, we can write the normalized probability of finding
+microstate <span class="math notranslate nohighlight">\(j\)</span> of the system in terms of the degeneracy of the bath as <a class="reference internal" href="#equation-pj">(16)</a>.</p>
+<p>Our goal now is to find an expression for <span class="math notranslate nohighlight">\(p_j\)</span> that does not depend on
+properties of the bath or total combined system, since in general we
+only know the properties of the system itself. To begin, we write the
+logarithm of <span class="math notranslate nohighlight">\(p_j\)</span>, recognizing that <span class="math notranslate nohighlight">\(\ln \Omega(N_B, V_B, E_T-E_j)\)</span> is
+related to the Boltzmann entropy of the bath:</p>
+<div class="math notranslate nohighlight">
+\[\ln p_j = \ln  \Omega(N_B, V_B, E_T-E_j) - \ln C_1\]</div>
+<p>For these
+next few lines, I will use the notation
+<span class="math notranslate nohighlight">\(\Omega_B(E) \equiv \Omega(N_B, V_B, E)\)</span> to simplify the notation.</p>
+<div class="admonition-show-that-ln-omega-b-e-t-e-j-ln-omega-b-e-t-frac-e-j-k-b-t-s-dots admonition">
+<p class="admonition-title">Show that <span class="math notranslate nohighlight">\(\ln\Omega_B(E_T-E_j) = \ln \Omega_B(E_T) - \frac{E_j}{k_B T_S} + \dots\)</span></p>
+<details>
+  <summary><b></b>[Show derivation]</summary>
+<p>By construction, the energy of the bath and the energy of the total
+combined system is much greater than the energy of the system of
+interest (<span class="math notranslate nohighlight">\(E_T \gg E_j\)</span>). We can then write a Taylor expansion for
+<span class="math notranslate nohighlight">\(\ln \Omega(N_B, V_B, E_T-E_j)\)</span> around the point <span class="math notranslate nohighlight">\(E_T-E_j \approx E_T\)</span>.
+Recall that the expression for a Taylor expansion is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+f(x) &amp;= f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 \dots 
+\end{aligned}\]</div>
+<p>If I define <span class="math notranslate nohighlight">\(x = E_T-E_j\)</span>, <span class="math notranslate nohighlight">\(a = E_T\)</span>, and <span class="math notranslate nohighlight">\(x-a = -E_j\)</span>, my Taylor expansion for <span class="math notranslate nohighlight">\(\ln  \Omega_B(E_T-E_j)\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+\ln  \Omega_B(E_T-E_j) &amp;\approx \ln \Omega_B(E_T) - E_j \left [\frac{\partial  \ln \Omega_B(E_T-E_j)}{\partial (E_T-E_j)} \right ]_{N_B, V_B} + \dots
+\end{aligned}\]</div>
+<p>To simplify this equation, we substitute in the expression for the Boltzmann entropy of the
+bath microcanonical ensemble,
+<span class="math notranslate nohighlight">\(S_B(E_T - E_j) = k_B \ln \Omega_B(E_T - E_j)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+\ln  \Omega_B(E_T-E_j) &amp;\approx \ln \Omega_B(E_T) - \frac{E_j}{k_B} \left [ \frac{\partial  S_B(E_T-E_j)}{\partial (E_T-E_j)} \right ]_{N_B, V_B} + \dots
+\end{aligned}\]</div>
+<p>Next, we recognize that
+<span class="math notranslate nohighlight">\(\left ( \frac{\partial S_B(E_T-E_j)}{\partial (E_T-E_j)}\right )_{N_B, V_B} = \frac{1}{T_B}\)</span>
+using the same thermodynamic relation from last lecture, and moreover
+<span class="math notranslate nohighlight">\(1/T_B = 1/T_S\)</span> due to the equilibrium between the system and bath:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\ln  \Omega_B(E_T-E_j) &amp;\approx \ln \Omega_B(E_T) - \frac{E_j}{k_B T_B} + \dots \\
+&amp;= \ln \Omega_B(E_T) - \frac{E_j}{k_B T_S} + \dots
+\end{aligned}\end{split}\]</div>
+</details>
+</div>
+<div class="admonition-what-happens-to-the-higher-order-terms admonition">
+<p class="admonition-title">What happens to the higher-order terms?</p>
+<details>
+  <summary><b></b>[Click for answer]</summary>
+The next highest order term would be of the form:
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+\left ( \frac{\partial^2  S_B}{\partial E_B^2} \right ) &amp;=  \left ( \frac{\partial (1/T_B)}{\partial E_B} \right ) \propto \frac{1}{C_V}
+\end{aligned}\]</div>
+<p>Thus, the second order term is related to the inverse of the heat
+capacity of the bath; we can assume that this value is negligible if the
+bath is large (i.e., the temperature of the bath is a constant). This is
+an assumption about the bath/combined system only, and thus is not
+violated even if our system of interest is small!</p>
+</details>
+</div>
+<p>We can now use this Taylor expansion, truncated at first order, to write
+a new expression for the probability of obtaining a system in microstate
+<span class="math notranslate nohighlight">\(j\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\ln p_j  &amp;= \ln \Omega_B(E_T) - \frac{E_j}{k_B T_S} - \ln C_1 \\
+p_j &amp;= \frac{\Omega_B(E_T)}{C_1} e^{-E_j/k_BT_S} \\
+\therefore p_j &amp;= C_2 e^{-E_j/k_BT_S} 
+\end{aligned}\end{split}\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(C_2\)</span> is a constant the combines the degeneracy of the bath for
+some given energy, <span class="math notranslate nohighlight">\(\Omega_B(E_T)\)</span>, with the normalization constant
+<span class="math notranslate nohighlight">\(C_1\)</span>. The value <span class="math notranslate nohighlight">\(C_2\)</span> is equivalent for all microstates because it is a
+property of our combined system, including the fictitious bath.</p>
+<p>We can
+now identify an expression for <span class="math notranslate nohighlight">\(C_2\)</span> by requiring that <span class="math notranslate nohighlight">\(\sum_j p_j = 1\)</span>
+to normalize the probability distribution:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\sum_j^{\textrm{microstates}} p_j &amp;= \sum_j^{\textrm{microstates}} C_2 e^{-E_j/k_BT_S} = C_2 \sum_j^{\textrm{microstates}}  e^{-E_j/k_BT_S} = 1 \\
+C_2 &amp;= \frac{1}{\sum_j e^{-E_j/k_BT_S}}\\
+\therefore &amp; p_j = \frac{e^{-E_j/k_BT_S}}{\sum_j e^{-E_j/k_BT_S}}
+\end{aligned}\end{split}\]</div>
+<dl class="simple glossary">
+<dt id="term-canonical-partition-function">canonical <a class="reference external" href="https://en.wikipedia.org/wiki/Partition_function_(statistical_mechanics)">partition function</a><a class="headerlink" href="#term-canonical-partition-function" title="Link to this term">#</a></dt><dd><p>A term, here <span class="math notranslate nohighlight">\(Z \equiv \sum_j e^{-E_j/k_BT}\)</span>, that normalizes
+the probability of finding state <span class="math notranslate nohighlight">\(j\)</span> in the canonical ensemble.</p>
+</dd>
+<dt id="term-Boltzmann-factor-Boltzmann-weight"><a class="reference external" href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/17%3A_Boltzmann_Factor_and_Partition_Functions#:~:text=The%20Boltzmann%20factor%20is%20used,represents%20a%20Thermally%20Equilibrated%20Distribution">Boltzmann factor / Boltzmann weight</a><a class="headerlink" href="#term-Boltzmann-factor-Boltzmann-weight" title="Link to this term">#</a></dt><dd><p>The weighting term for each state, <span class="math notranslate nohighlight">\(e^{-E_j/k_BT}\)</span> that communicates
+the energetic favorability of that state.</p>
+</dd>
+</dl>
+<p>At this point no parameters related to the bath or
+total combined system remain in the expression for <span class="math notranslate nohighlight">\(p_j\)</span> - the
+probability of identifying a microstate in the canonical ensemble is
+related entirely to the system properties without any contribution from
+the bath as desired. We will henceforth drop all <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(B\)</span> subscripts from
+system properties since <span class="math notranslate nohighlight">\(N\)</span>, <span class="math notranslate nohighlight">\(V\)</span>, and <span class="math notranslate nohighlight">\(T\)</span> are no longer ambiguous. The
+partition function is then:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Z &amp;= \sum_j^{\textrm{all states}} e^{-E_j /k_B T} \\
+p_j &amp;= \frac{e^{-E_j/k_BT}}{Z}
+\end{aligned}\end{split}\]</div>
+<p>The factor <span class="math notranslate nohighlight">\(k_B T\)</span> is essentially a scaling factor and is the amount of
+thermal energy accessible to the system. This expression shows that the
+probability that a system samples a particular microstate is related to
+the relative values of <span class="math notranslate nohighlight">\(E_j\)</span> and <span class="math notranslate nohighlight">\(k_B T\)</span>. Often, we will also define <span class="math notranslate nohighlight">\(\beta \equiv 1/k_B T\)</span>
+to simplify notation.</p>
+<div class="admonition-conceptually-why-does-it-make-sense-that-the-probabilities-are-exponentially-weighted admonition">
+<p class="admonition-title">Conceptually, why does it make sense that the probabilities are exponentially weighted?</p>
+<details>
+  <summary><b></b>[Click for answer]</summary>
+<p>States with low (negative) energies are
+exponentially more probable than high energy states. If the energy of a
+state is much larger than <span class="math notranslate nohighlight">\(k_B T\)</span>, the probability of observing that
+state is very low. Conversely, if the temperature of a system is very
+high, the probability of any given state becomes approximately equal
+since variations in <span class="math notranslate nohighlight">\(E_j\)</span> between states will be negligible relative to
+the value of <span class="math notranslate nohighlight">\(k_BT\)</span>.</p>
+</details>
+</div>
+<p>So far, we have focused on the energy of a particular microstate,
+referring to a particular set of particle configurations and energies.
+We can also write the probability <span class="math notranslate nohighlight">\(p_\nu\)</span> of obtaining <strong>any</strong>
+microstate of the system of interest that has an energy <span class="math notranslate nohighlight">\(E_\nu\)</span>. In
+general, there are many possible microstates that have the same energy,
+but have different particle configurations. The number of such states is
+given by the microcanonical degeneracy <span class="math notranslate nohighlight">\(\Omega(N_S, V_S, E_\nu)\)</span>, so
+<span class="math notranslate nohighlight">\(p_\nu \gg p_j\)</span>. <span class="math notranslate nohighlight">\(p_\nu\)</span> is equal to the probability that the system of
+interest is in a particular microstate with energy <span class="math notranslate nohighlight">\(E_j\)</span> (where the
+value of <span class="math notranslate nohighlight">\(E_j = E_\nu\)</span>) multiplied by the number of possible microstates
+of the system for which <span class="math notranslate nohighlight">\(E_j = E_\nu\)</span>. This gives (again, dropping all
+subscripts now):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+p_\nu &amp;= \Omega(N,V, E_\nu) p_j \\
+&amp;= \frac{\Omega(N, V, E_\nu) e^{-\beta E_\nu}}{\sum_\nu^\textrm{energies} \Omega(N, V, E_\nu)   e^{-\beta E_\nu}} \label{canonical_probability}
+\end{aligned}\end{split}\]</div>
+<p>Here, the denominator is again obtained by normalizing the expression in
+the numerator. Since the sums in the denominators of the expressions for
+both <span class="math notranslate nohighlight">\(p_j\)</span> and <span class="math notranslate nohighlight">\(p_\nu\)</span> run over all <em>possible</em> states, both are
+equivalent. Thus, we can write the partition function of the system as:</p>
+<div class="math notranslate nohighlight">
+\[Z = \sum_j^{\text{microstates}} e^{-\beta E_j} = \sum_\nu^{\text{energies}} \Omega(N, V, E_\nu)  e^{-\beta E_\nu} \label{canonical_probability2}\]</div>
+<p>where again the first form has a sum that runs over all individual
+microstates (indicated by the subscript <span class="math notranslate nohighlight">\(j\)</span>) while the second form has a
+sum that runs over all possible energy levels (indicated by the
+subscript <span class="math notranslate nohighlight">\(\nu\)</span>) and includes the degeneracy associated with each energy
+level. The partition function is a constant which normalizes the
+probabilities, and since it enumerates all <strong>possible</strong> microstates of
+the system (each weighted by a corresponding Boltzmann factor), the
+value of the partition function is the same regardless of whether we sum
+over microstates or over energy levels. We will next connect the
+partition function to macroscopic thermodynamic parameters.</p>
+</section>
+<section id="connecting-the-canonical-ensemble-to-thermodynamics">
+<h2>Connecting the canonical ensemble to thermodynamics<a class="headerlink" href="#connecting-the-canonical-ensemble-to-thermodynamics" title="Link to this heading">#</a></h2>
+<p>Just as we can use the relation <span class="math notranslate nohighlight">\(S = k_B \ln \Omega(N, V, E)\)</span> to derive
+relationships between the degeneracy in the microcanonical ensemble and
+various thermodynamic variables through the entropy, we can relate the
+canonical partition function to the Helmholtz free energy using the
+relation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+F &amp;= -k_B T \ln Z (N, V, T)
+\end{aligned}\]</div>
+<p>We will show this by first deriving an expression for the
+ensemble-average energy of the canonical ensemble using the expression
+for the partition function. We will then show that invoking the relation
+<span class="math notranslate nohighlight">\(F=-k_BT \ln Z\)</span> allows us to equate the ensemble-average energy to the
+thermodynamic relationship between the internal energy and the Helmholtz
+free energy. First, we can write an expression for the ensemble-average
+energy of the canonical ensemble:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\langle E \rangle &amp;= \sum_j^\text{states} p_j E_j \\
+&amp;= \sum \left ( \frac{e^{-\beta E_j}}{Z} \right ) E_j \\
+&amp;= \frac{1}{Z} \sum_j E_j e^{-\beta E_j} 
+\end{aligned}\end{split}\]</div>
+<p>Here, we have used the expression for the probability of finding a
+particular microstate in the canonical ensemble,
+<span class="math notranslate nohighlight">\(p_j \equiv e^{-\beta E_j}/Z\)</span>. We proceed by recognizing that the
+<span class="math notranslate nohighlight">\(E_je^{-\beta E_j} = -\frac{\partial}{\partial\beta}e^{-\beta E_j}\)</span>, allowing us to write:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\langle E \rangle &amp;= \frac{1}{Z} \sum_j - \frac{\partial}{\partial \beta}  \left (e^{-\beta E_j} \right)_{N,V} \\
+&amp;= -\frac{1}{Z} \frac{\partial}{\partial \beta}  \left (\sum_j e^{-\beta E_j}\right )_{N,V} \label{distributive_de} \\
+&amp;= - \frac{1}{Z} \left ( \frac{\partial Z}{\partial \beta}\right )_{N,V} \\
+&amp;= - \left(\frac{\partial \ln Z}{\partial \beta} \right )_{N,V} 
+\end{aligned}\end{split}\]</div>
+<p>Note that we have used a few tricks to get this last result -
+specifically, we note that a sum of derivatives is equivalent to the
+derivative of a sum
+(<span class="math notranslate nohighlight">\(\sum \frac{\partial X_j}{\partial Y} = \frac{\partial}{\partial Y}\sum X_j\)</span>)
+and this sum is equivalent to the partition function, then we use the
+chain rule to arrive at the final result, which expresses the
+ensemble-average energy in terms of a temperature deriative of the
+partition function (since <span class="math notranslate nohighlight">\(\beta = 1/k_B T\)</span>, a derivative with respect
+to <span class="math notranslate nohighlight">\(\beta\)</span> is equivalent to a derivative with respect to inverse
+temperature).</p>
+<p>So far we have assumed no connection to thermodynamics at all. We now
+show that deriving an equivalent expression for the internal energy in
+terms of a temperature derivative of the Helmholtz free energy allows us
+to relate the Helmholtz free energy to the partition function. Let us
+now consider the thermodynamic relationship between the Helmholtz free
+energy and internal energy from <a class="reference internal" href="Lecture1B.html"><span class="doc std std-doc">a few lectures ago</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+F = E -TS
+\end{aligned}\]</div>
+<p>We can also write the total derivative of the Helmholtz free energy (and
+substitute in the fundamental relation for <span class="math notranslate nohighlight">\(dE\)</span>) to obtain a
+relationship for the entropy to eliminate it from the expression above:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+dF &amp;= dE - TdS - SdT \\
+dE &amp;= TdS - PdV + \mu dN \\
+dF &amp;= -S dT - PdV + \mu dN \\\label{dF}
+&amp;= \left ( \frac{\partial F}{\partial T} \right )_{N,V} dT + \left ( \frac{\partial F}{\partial V} \right )_{N, T} dV + \left ( \frac{\partial F}{\partial N} \right )_{V, T} dN 
+\end{aligned}\end{split}\]</div>
+<p>This expression then yields:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+S &amp;= -\left ( \frac{\partial F}{\partial T}\right )_{N,V} \\
+\therefore E &amp;= F - T \left ( \frac{\partial F}{\partial T}\right )_{N,V}
+\end{aligned}\end{split}\]</div>
+<p>Letting <span class="math notranslate nohighlight">\(T = k_B/\beta\)</span> we can write:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+E &amp;= F - \frac{k_B}{\beta} \left ( \frac{\partial F}{\partial (k_B/\beta)}\right )_{N,V} \\
+%&amp;= F - \frac{1}{\beta} \left ( \frac{\partial F}{\partial \beta}\right )_{N,V} \left ( \frac{\partial %\beta}{\partial \beta^{-1}}\right )_{N,V} \\
+&amp;= F + \beta \left ( \frac{\partial F}{\partial \beta}\right )_{N,V} 
+\end{aligned}\end{split}\]</div>
+<p>We now have the two following expressions, one derived from the
+canonical ensemble and one from thermodynamics:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\langle E \rangle &amp;= - \left(\frac{\partial \ln Z}{\partial \beta} \right )_{N,V} \quad \text{stat. mech} \\
+E &amp;= F + \beta \left ( \frac{\partial F}{\partial \beta}\right )_{N,V}  \quad \text{thermo}
+\end{aligned}\end{split}\]</div>
+<p>From ergodicity, we also know that <span class="math notranslate nohighlight">\(\langle E \rangle = E\)</span>, meaning that
+the ensemble-average value of <span class="math notranslate nohighlight">\(E\)</span> calculated from statistical mechanics
+is equivalent to the thermodynamic definition. We could equate these
+expressions to find an expression for <span class="math notranslate nohighlight">\(F\)</span>, noting the visual similarity of
+our thermodynamic definition to the <a class="reference external" href="https://en.wikipedia.org/wiki/Product_rule">product rule</a>.
+Doing so would lead to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+F &amp;= -k_B T \ln Z = -(1/\beta) \ln Z
+\end{aligned}\]</div>
+<p>We can confirm this relationship by substituting it into the first
+expression to check for consistency:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\langle E \rangle &amp;= \left(\frac{\partial (\beta F)}{\partial \beta} \right )_{N,V}  \\ 
+&amp;= F + \beta \left ( \frac{\partial F}{\partial \beta}\right )_{N,V} \\
+&amp;= E \quad \text{ from thermo}
+\end{aligned}\end{split}\]</div>
+<p>Therefore, substituting in our putative link between the partition
+function and the Helmholtz free energy correctly derives the same
+expression obtained from thermodynamics alone (given the equivalence
+between ensemble-average energy and macroscopic energy according to
+Postulate 1). This confirms the relationship between the Helmholtz free
+energy and the canonical partition function. To summarize, our three
+critical relationships for the canonical ensemble are then:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Z &amp;= \sum_j^{\text{microstates}} e^{-\beta E_j} = \sum_\nu^{\text{energies}} \Omega(N,V,E_\nu) e^{-\beta E_\nu}\\
+p_j &amp;= \frac{e^{-\beta E_j}}{Z} \\
+F &amp;= -k_B T \ln Z(N,V,T)
+\end{aligned}\end{split}\]</div>
+</section>
+<section id="revisiting-the-two-state-system">
+<h2>Revisiting the two-state system<a class="headerlink" href="#revisiting-the-two-state-system" title="Link to this heading">#</a></h2>
+<p>To illustrate how a judicious choice of statistical ensemble can
+simplify the analysis of systems, we will repeat the example from
+<a class="reference internal" href="Lecture2.html"><span class="std std-doc">our previous lecture</span></a> using the canonical ensemble,
+instead of the microcanonical
+ensemble. Recall that the system under consideration is a polymer
+adsorbed to a surface with <span class="math notranslate nohighlight">\(N\)</span> total monomers in the chain, of which <span class="math notranslate nohighlight">\(n\)</span>
+are adsorbed to the surface with an energy <span class="math notranslate nohighlight">\(-\epsilon\)</span>. The total energy
+of the system is then <span class="math notranslate nohighlight">\(E = -n \epsilon\)</span> and we seek to relate the number
+of adsorbed monomers to the temperature.</p>
+<p><img alt="image" src="../_images/fig_3_1.png" /></p>
+<p>Previously, we solved this
+problem using the microcanonical ensemble by first solving for the
+relationship between the entropy, <span class="math notranslate nohighlight">\(S\)</span>, and the number of adsorbed
+monomers, then identifying a temperature dependence via derivative of
+the entropy. If we instead treat the system using the canonical ensemble
+by assuming that the energy of the system is allowed to vary (i.e., the
+number of adsorbed monomers varies) and only the temperature is held
+fixed, we can directly relate temperature to energy. We will solve this
+problem in two ways.</p>
+<p>In our first approach, we recognize that all monomers adsorb
+independently of each other. Since the monomers
+are independent, the probability that one monomer adsorbs does not
+affect the probability that another monomer adsorbs.
+Therefore, we can
+instead consider a single monomer as a system, in which case the
+canonical ensemble for a single monomer has only two microstates: either
+adsorbed or not adsorbed. For a single monomer we can write that the
+probability <span class="math notranslate nohighlight">\(\rho\)</span> of adsorbing in the canonical ensemble is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\rho &amp;= \frac{e^{-\beta E_\textrm{adsorb}}}{\sum_j^\text{microstates} e^{-\beta E_j}} \\
+&amp;= \frac{e^{\beta \epsilon}}{e^{-\beta(0)} + e^{\beta(\epsilon)} }  \\
+&amp;= \frac{e^{\beta \epsilon}}{1 + e^{\beta\epsilon}} 
+\end{aligned}\end{split}\]</div>
+<p>Here, we have explicitly enumerated both states in the partition
+function. The ensemble-average number of adsorbed monomers is then:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\langle n \rangle &amp;=  \sum_{states} \rho = N \rho \\
+&amp;= \frac{ N  e^{\beta \epsilon}}{1 + e^{\beta\epsilon}} \\
+&amp;= \frac{N}{1 + e^{-\beta\epsilon}}
+\end{aligned}\end{split}\]</div>
+<p>This result is the same expression that was derived using the
+microcanonical ensemble and is obtained much more easily.</p>
+<p><strong>Note the key
+steps:</strong> we assume that the monomers are independent, we calculate the
+probability of adsorbing for each monomer, then multiply this
+probability by the number of monomers. This assumption of independent
+treatment of a set of identical systems will be discussed further in
+future lectures.</p>
+<p>We can also obtain this result directly from the canonical partition
+function. Here we will use <span class="math notranslate nohighlight">\(z\)</span> to represent the partition function for
+adsorbing a single monomer (with two terms as above) and let
+<span class="math notranslate nohighlight">\(\langle \epsilon \rangle\)</span> be the ensemble-average energy per monomer.
+The ensemble-average number of adsorbed monomers is then
+<span class="math notranslate nohighlight">\(\langle n \rangle = -N \langle \epsilon \rangle / \epsilon\)</span>. Using a
+relation from above we can then write:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\langle \epsilon \rangle &amp;=  -\left(\frac{\partial \ln z}{\partial \beta} \right )_{N,V}  \\ 
+&amp;= -\left ( \frac{\partial \ln (1 + e^{\beta\epsilon})}{\partial \beta} \right )_{N, V} \\
+&amp;= -\frac{\epsilon e^{\beta \epsilon}}{1+e^{\beta \epsilon}} \\
+ \langle n \rangle &amp;= -N \langle \epsilon \rangle / \epsilon \\
+&amp;= \frac{N }{1 + e^{-\beta \epsilon}} \label{eq:3.37}
+\end{aligned}\end{split}\]</div>
+<p>This approach again returns the same result.</p>
+</section>
+<section id="link-to-shared-notes">
+<h2><a class="reference external" href="https://docs.google.com/document/d/1aCDxbRoz7d2eICYUjXBlMxxE-KaluGfo/edit?usp=drive_link&amp;amp;ouid=113272049620170441297&amp;amp;rtpof=true&amp;amp;sd=true">Link to Shared Notes</a><a class="headerlink" href="#link-to-shared-notes" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lecture_files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lecture3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Application of the microcanonical ensemble: two-state system</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Lecture5.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Generalized ensembles</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-readings-for-the-enthusiast">Additional Readings for the Enthusiast</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-for-today-s-lecture">Goals for today’s lecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-canonical-ensemble">Introduction to the canonical ensemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-canonical-partition-function">Derivation of canonical partition function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-the-canonical-ensemble-to-thermodynamics">Connecting the canonical ensemble to thermodynamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revisiting-the-two-state-system">Revisiting the two-state system</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-to-shared-notes">Link to Shared Notes</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Reid van Lehn, Matt Gebbie, Rose K. Cersonsky
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

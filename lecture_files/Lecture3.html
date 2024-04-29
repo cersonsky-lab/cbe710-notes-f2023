@@ -1,0 +1,852 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Application of the microcanonical ensemble: two-state system &#8212; Advanced Thermodynamics for Chemical Engineers</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture_files/Lecture3';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The canonical ensemble" href="Lecture4.html" />
+    <link rel="prev" title="Postulates of statistical mechanics" href="Lecture2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Advanced Thermodynamics for Chemical Engineers</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Class introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Before we get started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture1A.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture1B.html">Review of thermodynamics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture2.html">Postulates of statistical mechanics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Application of the microcanonical ensemble: two-state system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture4.html">The canonical ensemble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture5.html">Generalized ensembles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture6.html">The ideal gas partition function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture7.html">Application of independent subsystems: the Langmuir isotherm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture8A.html">The Ising model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture8B.html">Mean-field theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture9A.html">Fluctuations and thermodynamic response functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics Problem Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_1/problem_set_1.html">Problem Set 1 (Due Wednesday, September 20, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_2/problem_set_2.html">Problem Set 2 (Due Wednesday, September 27, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_3/problem_set_3.html">Problem Set 3 (Due Monday, October 9, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Molecular Simulation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture9B.html">An introduction to molecular simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture10.html">Monte Carlo simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture11.html">Nuances of stochastic sampling in statistical ensembles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture12A.html">Molecular dynamics simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture12B.html">Temperature and velocities in MD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture13.html">Distribution of particles in states of matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture14A.html">The potential of mean force</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture14B.html">Umbrella Sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture15.html">Free energy perturbation and thermodynamic integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Molecular Simulation Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problems/simulation_project.html">Simulation Project (Due Monday, November 6, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture16.html">Postulates of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture17.html">Heat engines and possible processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture18.html">The Carnot Cycle and the Theorem of Clausius</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture19.html">The fundamental relation of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture20.html">Legendre transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture21.html">Conditions of equilibrium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture22.html">Equilibrium in single-component systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture23.html">Phase diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture24.html">Fugacity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture25.html">Ideal mixtures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture26.html">Non-ideal mixtures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics Problem Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_4/problem_set_4.html">Problem Set 4 (Due Wednesday, November 22, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_5/problem_set_5.html">Problem Set 5 (Due Wednesday, November 29, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_6/problem_set_6.html">Problem Set 6 (Due Wednesday, December 6, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../appendices/notation.html">Additional Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/thermo_pot.html">Summary of thermodynamic potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/expansion.html">Derivation of expansion rule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/euler.html">Derivation of Euler integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/references.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lecture_files/Lecture3.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Application of the microcanonical ensemble: two-state system</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-readings-for-the-enthusiast">Additional Readings for the Enthusiast</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-for-today-s-lecture">Goals for today’s lecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-mathematics">Relevant Mathematics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorics">Combinatorics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stirling-s-approximation">Stirling’s approximation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-the-example">Back to the example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-to-shared-notes">Link to Shared Notes</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="application-of-the-microcanonical-ensemble-two-state-system">
+<h1>Application of the microcanonical ensemble: two-state system<a class="headerlink" href="#application-of-the-microcanonical-ensemble-two-state-system" title="Link to this heading">#</a></h1>
+<section id="additional-readings-for-the-enthusiast">
+<h2>Additional Readings for the Enthusiast<a class="headerlink" href="#additional-readings-for-the-enthusiast" title="Link to this heading">#</a></h2>
+<p><span id="id1">McQuarrie [<a class="reference internal" href="../appendices/references.html#id3" title="Donald A. McQuarrie. Statistical mechanics. University Science Books, Sausalito, Calif, 2000. ISBN 978-1-891389-15-3. URL: https://vuquangnguyen2016.files.wordpress.com/2017/12/339279795-donald-a-mcquarrie-statistical-mechanics-bookzz-org.pdf.">3</a>]</span>, Chapter 1, Chapter 2.1</p>
+<p><span id="id2">Chandler [<a class="reference internal" href="../appendices/references.html#id2" title="David Chandler. Introduction to Modern Statistical Mechanics. Oxford University Press, New York, 1st edition edition, September 1987. ISBN 978-0-19-504277-1. URL: http://pcossgroup.xmu.edu.cn/old/users/xlu/group/courses/apc/imsm_chandler.pdf.">1</a>]</span>, Chapter 3.1-3.4</p>
+</section>
+<section id="goals-for-today-s-lecture">
+<h2>Goals for today’s lecture<a class="headerlink" href="#goals-for-today-s-lecture" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Derive a physical observable in the context of the microcanonical ensemble.</p></li>
+<li><p>Understand and apply Stirling’s approximation from last lecture.</p></li>
+</ul>
+</section>
+<section id="problem-statement">
+<h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Link to this heading">#</a></h2>
+<p>In the last lecture, we introduced the concept of the microcanonical
+ensemble, which we defined as the set of all possible microstates
+associated with a macrostate in which the number of particles (<span class="math notranslate nohighlight">\(N\)</span>), the
+volume (<span class="math notranslate nohighlight">\(V\)</span>), and the energy (<span class="math notranslate nohighlight">\(E\)</span>) are constant. We then defined several
+postulates of statistical mechanics, which we summarize as:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(Y_\textrm{obs} = \langle Y \rangle\)</span>: the ergodic hypothesis, where
+<span class="math notranslate nohighlight">\(\langle Y \rangle = \sum_i^\textrm{states} p_i Y_i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p_i = \frac{1}{\Omega(N,V,E)}\)</span>: the principle of equal a priori
+probabilities, where <span class="math notranslate nohighlight">\(\Omega(N,V,E)\)</span> is the degeneracy (or number of
+states) of the microcanonical ensemble</p></li>
+<li><p><span class="math notranslate nohighlight">\(S = k_B \ln \Omega(N,V,E)\)</span>: the definition of the Boltzmann
+entropy.</p></li>
+</ul>
+<p>We will now use an example to illustrate how the microcanonical ensemble
+can provide information about the thermodynamic properties of a system.</p>
+<p>Consider a polymer chain that adsorbs to an attractive surface.</p>
+<p><img alt="image" src="../_images/fig_3_1-01.png" /></p>
+<p>The chain is composed of <span class="math notranslate nohighlight">\(N\)</span> monomers that do not interact with each other.
+The surface is attractive such that a single monomer adsorbs favorably
+with an energy <span class="math notranslate nohighlight">\(-\epsilon\)</span>. If we assume the energy of the free monomers
+is 0 and there are no monomer-monomer interactions, then the total
+energy of the system for <span class="math notranslate nohighlight">\(n\)</span> adsorbed monomers is:</p>
+<div class="math notranslate nohighlight">
+\[E = \sum_i^N \epsilon_i = -n \epsilon\]</div>
+<p>The question we will ask is - how does the energy of the system (or,
+equivalently, the number of adsorbed monomers) depend on the
+temperature?</p>
+<p>To start – what relationships do we know for our system?</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(E = -n \epsilon\)</span> from the microscopic description of the system
+given above</p></li>
+<li><p><span class="math notranslate nohighlight">\(S = k_B \ln \Omega (E)\)</span> from the definition of the entropy of the
+microcanonical ensemble using the shorthand version of
+<span class="math notranslate nohighlight">\(\Omega(N,V,E)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T = \left ( \frac{\partial E}{\partial S} \right )_V\)</span> from
+thermodynamics</p></li>
+</ul>
+<p>Given these relationships, we can use the equations of the
+microcanonical ensemble to relate the degeneracy to the entropy and then
+identify a relationship between the energy and temperature from
+thermodynamics. Thus, we will describe our system as having a constant
+energy - that is, we assume that <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(E\)</span> are fixed and then will
+derive a temperature dependence based on this assumption. There may be
+another ensemble that is more appropriate - for example, we may assume
+the temperature is constant, instead, and choose a different ensemble
+(e.g. the canonical ensemble) to solve for the temperature dependence.
+If we are consistent in our assumptions and mathematical framework, then
+any ensemble is fine (as long as the fixed thermodynamic variables in
+the ensemble do not violate some feature of the system) and we will
+return to this problem with alternative ensembles in future lectures.</p>
+<p>We need to start by computing an expression for the degeneracy.
+Recalling previous sections, we know that <span class="math notranslate nohighlight">\(\Omega(E)\)</span> is defined as the
+number of microstates that have the same energy <span class="math notranslate nohighlight">\(E = - n\epsilon\)</span>. Since
+the number of total monomers, <span class="math notranslate nohighlight">\(N\)</span>, is greater than the number of
+adsorbed monomers, <span class="math notranslate nohighlight">\(n\)</span>, there are many possible ways to choose the the
+set of <span class="math notranslate nohighlight">\(n\)</span> adsorbed monomers from the total set of <span class="math notranslate nohighlight">\(N\)</span> monomers, but any
+set of <span class="math notranslate nohighlight">\(n\)</span> that we select will have the same energy. Therefore, the
+degeneracy of this system is equal to the number of unique ways to
+select <span class="math notranslate nohighlight">\(n\)</span> monomers that adsorb to the surface out of the possible set
+of <span class="math notranslate nohighlight">\(N\)</span> - or in other words, the number of unique ways to split the <span class="math notranslate nohighlight">\(N\)</span>
+monomers into two groups (adsorbed and free). Computing this quantity
+will motivate a mathematical aside.</p>
+</section>
+<section id="relevant-mathematics">
+<h2>Relevant Mathematics<a class="headerlink" href="#relevant-mathematics" title="Link to this heading">#</a></h2>
+<section id="combinatorics">
+<h3>Combinatorics<a class="headerlink" href="#combinatorics" title="Link to this heading">#</a></h3>
+<p>Imagine that you have <span class="math notranslate nohighlight">\(N\)</span> objects. In general, objects can either be</p>
+<dl class="simple glossary">
+<dt id="term-distinguishable">distinguishable<a class="headerlink" href="#term-distinguishable" title="Link to this term">#</a></dt><dd><p>objects that can be told apart, such as playing cards, or</p>
+</dd>
+<dt id="term-indistinguishable">indistinguishable<a class="headerlink" href="#term-indistinguishable" title="Link to this term">#</a></dt><dd><p>objects that cannot be told apart, such as marbles</p>
+</dd>
+</dl>
+<p>A common question we will face is how many
+ways we can uniquely divide <span class="math notranslate nohighlight">\(N\)</span> distinguishable objects into groups. We
+can calculate this using playing cards as an example. First, we can
+count the number of unique ways to shuffle a deck of <span class="math notranslate nohighlight">\(N\)</span> distinguishable
+playing cards. We can imagine placing the first card on the top of the
+deck; there are <span class="math notranslate nohighlight">\(N\)</span> possible choices for the first card. Next, we can
+imagine placing the next card on the top of the deck. Since we have
+removed 1 card, there are now <span class="math notranslate nohighlight">\(N-1\)</span> choices remaining, so there are
+<span class="math notranslate nohighlight">\(N(N-1)\)</span> unique choices for placing the first two cards, and so on. This
+leads to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{# of arrangements} &amp;= N(N-1)(N-2) \dots (2)(1) \nonumber \\
+&amp;= N!
+\end{aligned}\end{split}\]</div>
+<p>If the playing cards were instead indistinguishable, then there would
+instead be only unique 1 arrangement of playing cards (since switching
+the order of any two cards would make the order look exactly the same).
+Now, we consider the question how many ways there
+are to divide <span class="math notranslate nohighlight">\(N\)</span> distinguishable playing cards into two groups, one
+containing <span class="math notranslate nohighlight">\(n_1\)</span> cards and the second containing <span class="math notranslate nohighlight">\(N-n_1\)</span> cards.
+Following the same reasoning as above, for the first group we have <span class="math notranslate nohighlight">\(N\)</span>
+options for the first card, <span class="math notranslate nohighlight">\(N-1\)</span> for the second, and so on, until for
+the last selection we have <span class="math notranslate nohighlight">\(N-n_1+1\)</span> choices. The total number of
+arrangements for group 1 is thus:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+N(N-1)(N-2)\dots(N-n_1+1) &amp;= \frac{N(N-1)(N-2)\dots(2)(1)}{(N-n_1)(N-n_1-1)\dots(2)(1)} \nonumber \\ 
+&amp;= \frac{N!}{(N-n_1)!}
+\end{aligned}\end{split}\]</div>
+<p>The second group has <span class="math notranslate nohighlight">\(N-n_1!\)</span> choices for placing the
+remaining <span class="math notranslate nohighlight">\(N-n_1\)</span> cards, so that in total there are
+<span class="math notranslate nohighlight">\(\left [ N!/(N-n_1)!\right ] \times (N-n_1)! = N!\)</span> arrangements of the
+two groups.</p>
+<p>However, the question asked for how many ways there are to
+<strong>divide</strong> them into two groups; the arrangement of cards within each
+group does not matter, as placing the same <span class="math notranslate nohighlight">\(n_1\)</span> cards in the group in
+any order is still the same division. There are <span class="math notranslate nohighlight">\(n_1!\)</span> ways to arrange
+the <span class="math notranslate nohighlight">\(n_1\)</span> cards in the first group and <span class="math notranslate nohighlight">\((N-n_1)!\)</span> ways to arrange the
+cards in the second group, so in total we have overcounted by
+<span class="math notranslate nohighlight">\(n_1!(N-n_1)!\)</span> since every division into a group of <span class="math notranslate nohighlight">\(n_1\)</span> and <span class="math notranslate nohighlight">\(N-N_1\)</span>
+was counted an extra <span class="math notranslate nohighlight">\(n_1!(N-n_1)!\)</span> times associated with different
+orders of the cards. Thus, the total number of unique ways of dividing
+the cards into two groups if the order within each group doesn’t matter
+is:</p>
+<div class="math notranslate nohighlight">
+\[\text{# of divisions} = \frac{N!}{n_1!(N-n_1)!}\]</div>
+<p>This expression appears in the binomial expansion and is referred to as
+the <a class="reference external" href="https://en.wikipedia.org/wiki/Binomial_coefficient">binomial coefficient</a>, and can be expanded to any number of groups
+following similar reasoning.</p>
+</section>
+<section id="stirling-s-approximation">
+<h3><a class="reference external" href="https://en.wikipedia.org/wiki/Stirling%27s_approximation">Stirling’s approximation</a><a class="headerlink" href="#stirling-s-approximation" title="Link to this heading">#</a></h3>
+<p>We have just seen an example of a calculation that uses factorials,
+which can become difficult to treat algebraically. Fortunately, there is
+an approximation that simplifies the use of factorials. Because <span class="math notranslate nohighlight">\(N!\)</span> is
+a product, it is easier to deal with <span class="math notranslate nohighlight">\(\ln N!\)</span> which is a sum. We can
+write:</p>
+<div class="math notranslate nohighlight">
+\[\ln N! = \sum_{m=1}^N \ln m\]</div>
+<p><img alt="image" src="../_images/fig_3_2-01.gif" /></p>
+<p>The value of this sum is equal to the total area of a series of
+rectangles, each with height <span class="math notranslate nohighlight">\(\ln m\)</span> and width <span class="math notranslate nohighlight">\(dm = 1\)</span>. That is, we can
+equate the sum to the integral of <span class="math notranslate nohighlight">\(\ln m\)</span> using rectangular integration.</p>
+<p>As <span class="math notranslate nohighlight">\(N\)</span> increases, the difference between successive terms in the sum
+will become very small - if <span class="math notranslate nohighlight">\(N \gg 1\)</span>, the difference in the terms
+becomes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+\ln (m+1) - \ln m = \ln \frac{m+1}{m} \approx \ln 1 \approx 0 \quad \text{for $m\gg1$}
+\end{aligned}\]</div>
+<p>Therefore, for <span class="math notranslate nohighlight">\(N\gg1\)</span> we can replace the sum over discrete values of
+<span class="math notranslate nohighlight">\(m\)</span> with an integral over continuous values of <span class="math notranslate nohighlight">\(m\)</span> - effectively
+allowing the width of each rectangle (<span class="math notranslate nohighlight">\(dm\)</span>) to shrink to an
+infinitesimal value. The error between the approximation using an
+integral and the exact sum over integer values of <span class="math notranslate nohighlight">\(m\)</span> is very small once
+<span class="math notranslate nohighlight">\(N\)</span> is large. The resulting approximation allows us to write:</p>
+<div class="math notranslate nohighlight" id="equation-stirling">
+<span class="eqno">(14)<a class="headerlink" href="#equation-stirling" title="Link to this equation">#</a></span>\[\begin{split}\ln N! &amp;= \sum_{m=1}^N \ln m \nonumber \\
+&amp;\approx \int_1^N \ln m dm  \quad \text{if $N \gg 1$} \nonumber\\
+&amp;= \boxed{N \ln N - N} \end{split}\]</div>
+<p>Equation <a class="reference internal" href="#equation-stirling">(14)</a> is <strong>Stirling’s approximation</strong>, and differs by
+less than 1% from <span class="math notranslate nohighlight">\(\ln N!\)</span> if <span class="math notranslate nohighlight">\(N &gt; 50\)</span>. We will make frequent use of
+Stirling’s approximation, and moreover we will often approximate
+summations as integrals, throughout the course. We will return to
+solving the example using Stirling’s approximation and combinatorics in
+the next lecture.</p>
+</section>
+</section>
+<section id="back-to-the-example">
+<h2>Back to the example<a class="headerlink" href="#back-to-the-example" title="Link to this heading">#</a></h2>
+<p>Reminder, our overarching question is: how does the energy of the system
+(or, equivalently, the number of adsorbed monomers) depend on the temperature?</p>
+<p>Having defined methods for splitting objects into two groups, we can now
+count how many ways there are to separate <span class="math notranslate nohighlight">\(N\)</span> monomers into a group of
+<span class="math notranslate nohighlight">\(n\)</span> that are adsorbed to a surface and <span class="math notranslate nohighlight">\(N-n\)</span> that are not which defines
+the degeneracy of a microcanonical ensemble with
+<span class="math notranslate nohighlight">\(\langle E \rangle = n\epsilon\)</span>.</p>
+<p>We thus write an expression for
+<span class="math notranslate nohighlight">\(\Omega(E)\)</span> and the entropy based on the combinatorics expression above:</p>
+<div class="admonition-s-k-b-ln-left-frac-n-n-n-n-right admonition">
+<p class="admonition-title"><span class="math notranslate nohighlight">\(S =  k_B \ln \left ( \frac{N!}{n!(N-n)!} \right )\)</span></p>
+<details>
+  <summary><b></b>[Show derivation]</summary>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \Omega(E) &amp;= \frac{N!}{n!(N-n)!}\\
+  S         &amp;= k_B \ln \Omega(E) \\
+            &amp;= k_B \ln \frac{N!}{n!(N-n)!} \\
+  \end{split}\]</div>
+</details>
+</div>
+<div class="admonition-s-k-b-n-left-alpha-ln-alpha-1-alpha-ln-1-alpha-right-where-alpha-equiv-n-n admonition">
+<p class="admonition-title"><span class="math notranslate nohighlight">\(S =  -k_B N \left[\alpha \ln \alpha  + (1-\alpha)\ln(1-\alpha)\right]\)</span>, where <span class="math notranslate nohighlight">\(\alpha \equiv n/N\)</span></p>
+<details>
+  <summary><b></b>[Show derivation]</summary>
+<p>First, some algebra,</p>
+<div class="math notranslate nohighlight">
+\[
+  S =  k_B \left[\ln(N!) - \ln(n!) - \ln[(N-n)!]\right]
+  \]</div>
+<p>Using Stirling’s approximation,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  S &amp;=  k_B \left[N\ln N - N - n\ln n + n -(N-n)\ln(N-n) + (N-n)\right]\\
+    &amp;=  k_B \left[N\ln N  - n\ln n -(N-n)\ln(N-n)\right]\\
+  \end{split}\]</div>
+<p>Replacing all <span class="math notranslate nohighlight">\(n\)</span> with <span class="math notranslate nohighlight">\(N \alpha\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    &amp;=  k_B \left[N\ln N  - N\alpha \ln (N\alpha) -(N-N\alpha)\ln(N-N\alpha)\right]\\
+    &amp;=  k_B N \left[\ln N  - \alpha \ln (N\alpha) -(1-\alpha)\ln(N(1-\alpha))\right]\\
+    &amp;=  - k_B N \left[\alpha \ln \alpha  + (1-\alpha)\ln(1-\alpha)\right]\\
+  \end{split}\]</div>
+</details>
+</div>
+<p>With this equation relating the entropy and our number of adsorbed monomers,
+and our earlier equation relating the energy to the number of adsorbed monomers,
+we can determine the temperature dependence of the latter by using</p>
+<div class="math notranslate nohighlight">
+\[
+\left ( \frac{\partial E}{\partial S} \right )_V = T
+\]</div>
+<p>Given that the relationship <span class="math notranslate nohighlight">\(\frac{\partial S}{\partial E}\)</span> is more
+well-defined, we flip our equation:</p>
+<div class="math notranslate nohighlight">
+\[
+\left ( \frac{\partial S}{\partial E} \right )_V = \frac{1}{T}
+\]</div>
+<div class="admonition-n-frac-n-1-e-epsilon-k-bt admonition">
+<p class="admonition-title"><span class="math notranslate nohighlight">\(n = \frac{N}{ 1 +  e^{-\epsilon / k_BT}}\)</span></p>
+<details>
+  <summary><b></b>[Show derivation]</summary>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \left ( -\frac{\partial S}{\partial (n\epsilon)} \right )_V &amp;= \frac{1}{T} \\
+    -\frac{1}{\epsilon}\left (\frac{\partial S}{\partial \alpha}\right)_V\left (\frac{\partial \alpha}{\partial n} \right )_V &amp;= \frac{1}{T} \\
+   \end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   \left(\frac{\partial S}{\partial \alpha}\right)_V = k_B N \left[\ln(1-\alpha) - \ln\alpha\right]\\
+   \left(\frac{\partial \alpha}{\partial n}\right)_V = \frac{1}{N}
+   \end{split}\]</div>
+<p>such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \frac{-k_B}{\epsilon}\left[ (\ln(1-\alpha) - \ln\alpha) \right] &amp;= \frac{1}{T} \\
+    \ln(\frac{1}{\alpha}-1) &amp;= \frac{-\epsilon}{k_B T} \\
+    \frac{1}{\alpha} &amp;= 1 + e^{-\epsilon / k_BT} \\
+    \frac{N}{n} &amp;= 1 + e^{-\epsilon / k_BT} \\
+   \end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-twostatemicrofinal">
+<span class="eqno">(15)<a class="headerlink" href="#equation-twostatemicrofinal" title="Link to this equation">#</a></span>\[ n = \frac{N}{1 + e^{-\epsilon / k_BT}} \]</div>
+</div>
+</details>
+<p>Equation <a class="reference internal" href="#equation-twostatemicrofinal">(15)</a> relates the number of adsorbed monomers
+to microscopic features (i.e. the adsorption energy per monomer and
+total number of monomers) as a function of the system temperature.</p>
+<p>As <span class="math notranslate nohighlight">\(T\)</span> goes to 0, we expect the system to be in an energy-minimizing
+configuration with all monomers bound - indeed, as <span class="math notranslate nohighlight">\(T\rightarrow 0\)</span>,
+<span class="math notranslate nohighlight">\(n\rightarrow N\)</span>, indicating that all monomers adsorb.</p>
+<p>In the opposite
+extreme, as <span class="math notranslate nohighlight">\(T \rightarrow \infty\)</span>, <span class="math notranslate nohighlight">\(n\rightarrow N/2\)</span>, indicating that
+at infinite temperature exactly half of the monomers bind to the
+surface. This makes conceptual sense - if we have infinite thermal
+energy, the energy for adsorption is negligible so adsorbing or not
+adsorbing is equally likely for each monomer (we will revisit this
+result in future lectures).</p>
+<p>This example illustrates the basic principles of the statistical
+mechanics approach:</p>
+<ul class="simple">
+<li><p>we begin by identifying a set of constant
+macroscopic thermodynamic variables for the system (<span class="math notranslate nohighlight">\(NVE\)</span>),</p></li>
+<li><p>choose an appropriate statistical ensemble (microcanonical) corresponding to these
+variables,</p></li>
+<li><p>calculate the value for a thermodynamic variable (entropy) from ensemble properties based on our microscopic picture of the system,</p></li>
+<li><p>then use thermodynamic relations to get additional information about the
+system (temperature).</p></li>
+</ul>
+<div class="admonition-why-does-our-final-result-seem-to-contradict-our-assumption-that-energy-is-constant admonition">
+<p class="admonition-title">Why does our final result seem to contradict our assumption that energy is constant?</p>
+<details>
+  <summary><b></b>[Click for answer]</summary>
+Recall that the problem statement itself (i.e. the microscopic
+description of the system) does not specific a constant energy - we
+**choose** to describe our system in such a way that the energy is held
+constant, then apply the equations of the microcanonical ensemble
+(consistent with our choice) to derive the temperature dependence. We
+also could have derived the same result by assuming that the system is
+held at constant temperature and that the energy is allowed to vary, and
+achieve the same result (we will do this next lecture). We will find
+several variations of this basic approach, and will illustrate that the
+correct choice of thermodynamic variables, even for the same system, can
+dramatically simplify problem solutions.
+</details>
+</div>
+</section>
+<section id="link-to-shared-notes">
+<h2><a class="reference external" href="https://docs.google.com/document/d/1YWxl5aV9YwQdL5cn1YHTd6sZN7o8cx1p/edit?usp=drive_link">Link to Shared Notes</a><a class="headerlink" href="#link-to-shared-notes" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lecture_files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lecture2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Postulates of statistical mechanics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Lecture4.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The canonical ensemble</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-readings-for-the-enthusiast">Additional Readings for the Enthusiast</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-for-today-s-lecture">Goals for today’s lecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-mathematics">Relevant Mathematics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorics">Combinatorics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stirling-s-approximation">Stirling’s approximation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-the-example">Back to the example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-to-shared-notes">Link to Shared Notes</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Reid van Lehn, Matt Gebbie, Rose K. Cersonsky
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

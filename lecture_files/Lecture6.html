@@ -1,0 +1,1018 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>The ideal gas partition function &#8212; Advanced Thermodynamics for Chemical Engineers</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture_files/Lecture6';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Application of independent subsystems: the Langmuir isotherm" href="Lecture7.html" />
+    <link rel="prev" title="Generalized ensembles" href="Lecture5.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Advanced Thermodynamics for Chemical Engineers</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Class introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Before we get started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture1A.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture1B.html">Review of thermodynamics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture2.html">Postulates of statistical mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture3.html">Application of the microcanonical ensemble: two-state system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture4.html">The canonical ensemble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture5.html">Generalized ensembles</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The ideal gas partition function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture7.html">Application of independent subsystems: the Langmuir isotherm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture8A.html">The Ising model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture8B.html">Mean-field theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture9A.html">Fluctuations and thermodynamic response functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics Problem Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_1/problem_set_1.html">Problem Set 1 (Due Wednesday, September 20, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_2/problem_set_2.html">Problem Set 2 (Due Wednesday, September 27, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_3/problem_set_3.html">Problem Set 3 (Due Monday, October 9, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Molecular Simulation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture9B.html">An introduction to molecular simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture10.html">Monte Carlo simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture11.html">Nuances of stochastic sampling in statistical ensembles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture12A.html">Molecular dynamics simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture12B.html">Temperature and velocities in MD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture13.html">Distribution of particles in states of matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture14A.html">The potential of mean force</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture14B.html">Umbrella Sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture15.html">Free energy perturbation and thermodynamic integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Molecular Simulation Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problems/simulation_project.html">Simulation Project (Due Monday, November 6, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture16.html">Postulates of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture17.html">Heat engines and possible processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture18.html">The Carnot Cycle and the Theorem of Clausius</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture19.html">The fundamental relation of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture20.html">Legendre transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture21.html">Conditions of equilibrium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture22.html">Equilibrium in single-component systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture23.html">Phase diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture24.html">Fugacity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture25.html">Ideal mixtures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture26.html">Non-ideal mixtures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics Problem Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_4/problem_set_4.html">Problem Set 4 (Due Wednesday, November 22, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_5/problem_set_5.html">Problem Set 5 (Due Wednesday, November 29, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_6/problem_set_6.html">Problem Set 6 (Due Wednesday, December 6, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../appendices/notation.html">Additional Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/thermo_pot.html">Summary of thermodynamic potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/expansion.html">Derivation of expansion rule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/euler.html">Derivation of Euler integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/references.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lecture_files/Lecture6.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The ideal gas partition function</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-readings-for-the-enthusiast">Additional Readings for the Enthusiast</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-for-today-s-lecture">Goals for today’s lecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factorization-of-the-partition-function">Factorization of the partition function</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#over-counting-in-the-partition-function">Over-counting in the partition function</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">The ideal gas partition function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-partition-function-in-the-classical-limit">Ideal gas partition function in the classical limit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-relationships-of-the-ideal-gas-partition-function">Thermodynamic relationships of the ideal gas partition function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-to-shared-notes">Link to Shared Notes</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-ideal-gas-partition-function">
+<h1>The ideal gas partition function<a class="headerlink" href="#the-ideal-gas-partition-function" title="Link to this heading">#</a></h1>
+<section id="additional-readings-for-the-enthusiast">
+<h2>Additional Readings for the Enthusiast<a class="headerlink" href="#additional-readings-for-the-enthusiast" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span id="id1">Chandler [<a class="reference internal" href="../appendices/references.html#id2" title="David Chandler. Introduction to Modern Statistical Mechanics. Oxford University Press, New York, 1st edition edition, September 1987. ISBN 978-0-19-504277-1. URL: http://pcossgroup.xmu.edu.cn/old/users/xlu/group/courses/apc/imsm_chandler.pdf.">1</a>]</span> Chapter 4 (intro), 4.4-4.7</p></li>
+</ul>
+</section>
+<section id="goals-for-today-s-lecture">
+<h2>Goals for today’s lecture<a class="headerlink" href="#goals-for-today-s-lecture" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>How do independent subsystems impact our formulation of the partition function?</p></li>
+<li><p>How can we account for indistinguishable subsystems in the partition function?</p></li>
+<li><p>What is the characteristic length scale for treating a system classically?</p></li>
+</ul>
+</section>
+<section id="factorization-of-the-partition-function">
+<h2>Factorization of the partition function<a class="headerlink" href="#factorization-of-the-partition-function" title="Link to this heading">#</a></h2>
+<p>In the last lecture, we derived expressions for generalized partition
+functions and related connections to macroscopic thermodynamic
+potentials. We specifically paid attention to four key ensembles: the
+<a class="reference internal" href="Lecture2.html#term-microcanonical-ensemble"><span class="xref std std-term">microcanonical ensemble</span></a> (our starting point for all further
+derivations), the <a class="reference internal" href="Lecture2.html#term-canonical-ensemble"><span class="xref std std-term">canonical ensemble</span></a>, the <a class="reference internal" href="Lecture2.html#term-grand-canonical-ensemble"><span class="xref std std-term">grand canonical ensemble</span></a>, and
+the <a class="reference internal" href="Lecture2.html#term-isothermal-isobaric-ensemble"><span class="xref std std-term">isothermal-isobaric ensemble</span></a>. These are the four most common
+ensembles used in statistical mechanics. To date, we have considered
+partition functions describing all states for an entire system of
+interest.</p>
+<p>However, often times we will be able to divide the system into
+multiple <strong>independent</strong> subsystems (indeed, we did this for the polymer
+adsorption example), perhaps even independent particles, suggesting that
+we may want a relationship between the properties of an entire system
+and the properties of a subsystem. Two subsystems are independent if the
+microstate of one subsystem does not depend on the microstate of
+another - this requires that the subsystems non-interacting so that
+positions and energies are uncorrelated. We will thus introduce a method
+for relating a system partition function to subsystem partition
+functions.</p>
+<p>Consider a system for which we can break the energy into two parts
+(i.e., into the energies of two subsystems, for example, or two
+different sources of energy) such that we can write in general</p>
+<div class="math notranslate nohighlight">
+\[E = \epsilon^{(1)} + \epsilon^{(2)}\]</div>
+<p>The superscripts in this case
+indicate the energies of subsystems 1 and 2, and we partition the total
+system energy between them; this is similar to the partitioning of
+energy between the system of interest and the bulk reservoir that we
+used to derive the canonical partition function in <a class="reference internal" href="Lecture3.html"><span class="std std-doc">previous lectures</span></a>.</p>
+<p>The energy
+of a single configuration, <span class="math notranslate nohighlight">\(j\)</span>, of the combined system is then
+<span class="math notranslate nohighlight">\(E_j = \epsilon^{(1)}_n + \epsilon^{(2)}_m\)</span>, where the label <span class="math notranslate nohighlight">\(j\)</span>
+identifies a particular configuration of the combined system and <span class="math notranslate nohighlight">\(n\)</span> and
+<span class="math notranslate nohighlight">\(m\)</span> denote specific configurations of the two subsystems. We assume that
+<span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(m\)</span> are independent of each other since the subsystems
+themselves are independent. Rather than enumerating all possible
+microstates by summing over all <span class="math notranslate nohighlight">\(j\)</span>, we can thus instead enumerate all
+possible microstates by summing over all possible values of <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(m\)</span>
+independently. The corresponding canonical partition function for the
+combined system is then:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Z &amp;= \sum_j e^{-\beta E_j} \\
+&amp;= \sum_n \sum_m e^{-\beta \left[\epsilon^{(1)}_n + \epsilon^{(2)}_m \right]} \\
+&amp;= \sum_n \sum_m e^{-\beta\epsilon^{(1)}_n} e^{-\beta\epsilon^{(2)}_m}
+\end{aligned}\end{split}\]</div>
+<p>If the indices <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(m\)</span> are independent of each other, we can now
+further write:</p>
+<div class="math notranslate nohighlight" id="equation-ideal-gas-partition">
+<span class="eqno">(18)<a class="headerlink" href="#equation-ideal-gas-partition" title="Link to this equation">#</a></span>\[\begin{split}Z &amp;= \left ( \sum_n e^{-\beta\epsilon^{(1)}_n} \right ) \left ( \sum_m e^{-\beta\epsilon^{(2)}_m}  \right ) \\
+&amp;\equiv Z^{(1)}Z^{(2)}\end{split}\]</div>
+<p>Expressing the sum over all possible indices as a product of sums over
+single indices is the key to this method - because <span class="math notranslate nohighlight">\(E\)</span> can be decomposed
+into the <strong>sum</strong> of two <strong>independent</strong> values, the <strong>product</strong> of the
+two summations yields all possible values of <span class="math notranslate nohighlight">\(E\)</span>. You can demonstrate
+this manually by assuming a two-state energy system per subsystem, for
+example, and counting the possible products.</p>
+<div class="admonition-could-we-do-this-factorization-if-n-and-m-were-not-independent admonition">
+<p class="admonition-title">Could we do this factorization if <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(m\)</span> were not independent?</p>
+<details>
+<summary> Click for answer </summary>
+This factorization is only possible because the two subsystem energies,
+$\epsilon^{(1)}$ and $\epsilon^{(2)}$ are independent and uncorrelated -
+if either energy were a function of the other (i.e. if $n$ and $m$ were
+not independent), then the same factorization would not be possible.
+</details>
+</div>
+<p>Since each of the independent sums takes the same form as the canonical
+partition function, we use <span class="math notranslate nohighlight">\(Z^{(1)}\)</span> to refer to the partition function
+for subsystem 1, etc. Again, note that we write these as sums over
+particular microstates of the system and microstates of the subsystem,
+so there could be many possible microstates with the same decomposition
+of energies but with different particle configurations.</p>
+<p>Extending this result, if we break the system into <span class="math notranslate nohighlight">\(N\)</span> independent,
+uncorrelated subsystems then the partition function can be written as:</p>
+<div class="math notranslate nohighlight">
+\[Z =  Z^{(1)}Z^{(2)}\dots Z^{(N)}\]</div>
+<p>In principle, each of the <span class="math notranslate nohighlight">\(N\)</span> partition functions for the subsystems
+could be distinct, because each subsystem could represent a collection
+of particles giving rise to distinct possible energies. If, however, we
+have a system of completely <strong>identical, independent subsystems</strong> (e.g.
+each subsystem could represent a single particle), then the partition
+function for each subsystem is identical and the partition function of
+the combined system becomes:</p>
+<div class="math notranslate nohighlight" id="equation-factorization">
+<span class="eqno">(19)<a class="headerlink" href="#equation-factorization" title="Link to this equation">#</a></span>\[\begin{split}Z &amp;= (Z^{(1)})^N \\
+&amp;= z^N\end{split}\]</div>
+<p>To simplify this notation, we will define <span class="math notranslate nohighlight">\(Z^{(1)} \equiv z\)</span> as the
+single-subsystem partition function. This factorization dramatically
+simplifies our calculation of a system partition function - for example,
+if we had a system with 100,000 independent molecules (e.g., ideal gas
+molecules), and each molecule can exist in three different microstates,
+then the total number of states in the entire system is <span class="math notranslate nohighlight">\(3^{100,000}\)</span>,
+which is much too large to calculate. Eq. <a class="reference internal" href="#equation-factorization">(19)</a>
+instead says that we only need an expression
+for the three-state partition function <span class="math notranslate nohighlight">\(z\)</span> which is trivial. Again, we
+assume that each subsystem is independent and identical - so this
+implies that each subsystem has exactly the same partition function
+associated with it (same possible energies, same degeneracy for each
+energy, etc.).</p>
+<p>In the preceding definition we have applied a distinct label to each of
+the <span class="math notranslate nohighlight">\(N\)</span> different single-subsystem partition functions, implying that
+each molecule is <a class="reference internal" href="Lecture3.html#term-distinguishable"><span class="xref std std-term">distinguishable</span></a>. As we discussed in the derivation
+of the microcanonical ensemble, however, in most systems of independent
+particles the particles are instead <a class="reference internal" href="Lecture3.html#term-indistinguishable"><span class="xref std std-term">indistinguishable</span></a>.</p>
+<p>Identifying distinguishable vs. indistinguishable subsystems can be confusing, but
+the idea here is that particles/subsystems are distinguishable if we can
+uniquely identify the subsystem if it were randomly selected.</p>
+<div class="admonition-is-a-monomer-within-a-polymer-distinguishable-or-indistinguishable admonition">
+<p class="admonition-title">Is a monomer within a polymer distinguishable or indistinguishable?</p>
+<details><summary> Click for answer </summary>
+Distinguishable. Each monomer in a polymer is distinguishable because we can
+identify exactly where in the polymer chain it is (i.e. its if the
+first, second, third, etc. monomer).
+</details>
+</div>
+<div class="admonition-is-a-molecule-within-an-ideal-gas-distinguishable-or-indistinguishable admonition">
+<p class="admonition-title">Is a molecule within an ideal gas distinguishable or indistinguishable?</p>
+<details><summary> Click for answer </summary>
+Indistinguishable. Each molecule in an ideal
+gas is indistinguishable.
+</details>
+</div>
+<section id="over-counting-in-the-partition-function">
+<h3>Over-counting in the partition function<a class="headerlink" href="#over-counting-in-the-partition-function" title="Link to this heading">#</a></h3>
+<p><img alt="image" src="../_images/fig_6_1-01.png" /></p>
+<div class="admonition-let-s-consider-our-particles-on-this-lattice-suppose-i-have-set-up-my-system-to-place-particle-1-on-lattice-site-1-and-particle-2-on-lattice-site-2-how-is-this-different-from-placing-particle-1-on-lattice-site-2-and-particle-2-on-lattice-site-1 admonition">
+<p class="admonition-title">Let’s consider our particles on this lattice. Suppose I have set up my system to place particle 1 on lattice site 1 and particle 2 on lattice site 2. How is this different from placing particle 1 on lattice site 2 and particle 2 on lattice site 1?</p>
+<details><summary> Click for answer </summary>
+It isn't. Because particles 1 and 2 are indistinguishable, these two snapshots are
+also indistinguishable.
+<p>If each subsystem (here, the particles) of a combined system is indistinguishable,
+when we arbitrarily assign labels to each particle, the corresponding
+microstates are still indistinguishable, and thus each set of configurations should only be
+counted once in the system partition function.</p>
+</details>
+</div>
+<p>To avoid overcounting states associated with indistinguishable
+subsystems (here, the particles), we recognize from the discussion of the microcanonical
+ensemble that there are <span class="math notranslate nohighlight">\(N!\)</span> possible ways to assign energies
+<span class="math notranslate nohighlight">\(\epsilon_i\)</span>, <span class="math notranslate nohighlight">\(\epsilon_j\)</span>, etc. to the <span class="math notranslate nohighlight">\(N\)</span> subsystems, where <span class="math notranslate nohighlight">\(E = \sum_i \epsilon_i\)</span>.
+So for a particular value of <span class="math notranslate nohighlight">\(E\)</span> we have counted <span class="math notranslate nohighlight">\(N!\)</span> states when we should have
+counted only 1. If we imagine counting our partition function by summing
+over energy levels, then <strong>the degeneracy of each energy level is
+overcounted by this amount</strong>. More specifically, each possible way of
+assigning these states is the same for indistinguishable subsystems, so
+we overcount the degeneracy of each energy level in the combined system
+partition function by a factor of <span class="math notranslate nohighlight">\(N!\)</span>.</p>
+<p>Dividing by this factor of <span class="math notranslate nohighlight">\(N!\)</span> gives a final expression for the
+partition function of a system of <span class="math notranslate nohighlight">\(N\)</span> independent, indistinguishable
+subsystems as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Z &amp;= \frac{z^N}{N!} \\
+z &amp;= \sum_i e^{-\beta \epsilon_i}
+%&amp;= \sum_\nu \omega(\epsilon_\nu)e^{-\epsilon_\nu / k_BT}
+\end{aligned}\end{split}\]</div>
+<p>Finally, we can note that <span class="math notranslate nohighlight">\(\epsilon\)</span> itself may be divided into a series
+of individual components - for example, we can imagine a single particle
+as having a component of its energy related to its kinetic energy or its
+potential energy. Writing
+<span class="math notranslate nohighlight">\(\epsilon = \epsilon_a + \epsilon_b + \epsilon_c \dots\)</span> allows us to
+immediately write for the system partition function:</p>
+<div class="math notranslate nohighlight">
+\[Z = \frac{(z_a z_b z_c \dots)^N}{N!}\]</div>
+<p>where <span class="math notranslate nohighlight">\(z_a\)</span> are single-subsystem partition functions containing only the
+energetic term of the subdivision. The only important point to note here
+is that typically the different energetic components of the
+single-subsystem energy are distinguishable (i.e. kinetic energy and
+potential energy) and thus the factorial in the denominator does not
+change.</p>
+<p>To summarize, we thus obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Z &amp;= \sum_j e^{-\beta E_j} = \sum_{\nu}\Omega(N,V,E_\nu) e^{-\beta E_\nu} \quad \quad\text{Single system with $N$ particles} \\
+Z &amp;= z^N \text{, where}\quad z = \sum_j e^{-\beta \epsilon_j } \quad \quad\text{$N$ independent, distinguishable subsystems} \\
+Z &amp;= \frac{z^N}{N!}\text{, where}\quad z = \sum_j e^{-\beta \epsilon_j } \quad \quad\text {$N$ independent, indistinguishable subsystems} \\
+Z &amp;=  \frac{(z_a z_b z_c\dots)^N}{N!} \quad \quad\text {Eq. 6.14 with multiple energetic components per subsystem}
+\end{aligned}\end{split}\]</div>
+</section>
+</section>
+<section id="id2">
+<h2>The ideal gas partition function<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>We will now use these previous relations to now derive the partition
+function for a <strong>monatomic ideal gas</strong> with <span class="math notranslate nohighlight">\(N\)</span> particles as a exemplary
+case of a many-body non-interacting system and show that we can recover
+results expected from classical thermodynamics. The basic steps for
+identifying thermodynamic properties of the system will be the
+following:</p>
+<ol class="arabic simple">
+<li><p>Determine a single-particle energy and corresponding single-particle
+partition function</p></li>
+<li><p>Write a partition function for the entire system using the
+single-particle partition function</p></li>
+<li><p>Derive thermodynamic quantities via derivatives of the partition
+function</p></li>
+</ol>
+<p>We will start by performing this derivation in the canonical ensemble.
+We assume a volume of monatomic gas contained with a cubic box of length
+<span class="math notranslate nohighlight">\(L\)</span>, such that <span class="math notranslate nohighlight">\(V=L^3\)</span>. Each particle has an associated partition
+function <span class="math notranslate nohighlight">\(z = \sum_j e^{-\beta \epsilon_j}\)</span>.</p>
+<p>Because the system is ideal
+and each molecule is only a single atom (and hence there are no degrees
+of freedom associated with molecular vibrations, etc), the energy of
+each particle is given from the solution to the quantum <a class="reference external" href="https://en.wikipedia.org/wiki/Particle_in_a_box">particle in a
+box</a>, which is a
+generalization of a result stated in <a class="reference internal" href="Lecture1A.html"><span class="std std-doc">an earlier lecture</span></a>.
+A quantum particle in a box has a discrete
+spectrum of energies corresponding to the possible positions (or, more
+accurately, probability distributions associated with specific
+positions, which are equivalent to the square of the wavefunction). The
+energy is given as:</p>
+<div class="math notranslate nohighlight" id="equation-partbox3d">
+<span class="eqno">(20)<a class="headerlink" href="#equation-partbox3d" title="Link to this equation">#</a></span>\[\begin{split}\epsilon_{\nu} &amp;= \frac{h^2(n_x^2 + n_y^2 + n_z^2)}{8mL^2}, \\
+n_x, n_y, n_z &amp;= 1, 2, 3 \dots\end{split}\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(h\)</span> is the Planck constant, <span class="math notranslate nohighlight">\(m\)</span> is the mass of the particle, and
+<span class="math notranslate nohighlight">\(n_x\)</span>, <span class="math notranslate nohighlight">\(n_y\)</span>, and <span class="math notranslate nohighlight">\(n_z\)</span> are three unitless quantum numbers that specify
+a particular quantum state in a 3D box. Recall that in quantum mechanics
+energies are discretized, such that the three quantum numbers above
+specify discrete values of the energy, <span class="math notranslate nohighlight">\(\epsilon_{\nu}\)</span>, and also
+contribute to the degeneracy, <span class="math notranslate nohighlight">\(\omega_{\nu}\)</span> (written in lower
+case to indicate a single-particle degeneracy). Since particle positions
+are associated with different energies, the degeneracy of each energy
+level is specified only by the number of possible ways of assigning
+quantum numbers to yield that energy.</p>
+<p>To proceed, we would like to calculate the single particle partition
+function. We write the partition function by summing over all possble
+values of the energy, <span class="math notranslate nohighlight">\(\epsilon_{\nu}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[z =  \sum_{\nu}^\infty w_{\nu}e^{-\beta \epsilon_{\nu}}\]</div>
+<p>The prefactor <span class="math notranslate nohighlight">\(w_{\nu}\)</span> is the degeneracy of a given energy
+level, <span class="math notranslate nohighlight">\(\epsilon_{\nu}\)</span>. We can start by computing an expression for the
+degeneracy by picturing a three-dimensional grid of quantum numbers in
+a coordinate system defined by <span class="math notranslate nohighlight">\(n_x\geq 0\)</span>, <span class="math notranslate nohighlight">\(n_y\geq 0\)</span>, and <span class="math notranslate nohighlight">\(n_z\geq 0\)</span>, where each point
+in this space is a single possible molecular quantum state corresponding
+to some energy value <span class="math notranslate nohighlight">\(\epsilon_{\nu}\)</span>.</p>
+<p>The equation</p>
+<div class="math notranslate nohighlight">
+\[n_x^2 + n_y^2 + n_z^2 = \frac{8mL^2\epsilon_{\nu}}{h^2} = R^2\]</div>
+<p>then defines the equation for a sphere of radius <span class="math notranslate nohighlight">\(R^2\)</span> in the
+<span class="math notranslate nohighlight">\(n_xn_yn_z\)</span> space, where the expression for <span class="math notranslate nohighlight">\(R\)</span> is from the
+rearrangement of Eq. <a class="reference internal" href="#equation-partbox3d">(20)</a>. In 2D, this would look like:</p>
+<p><img alt="image" src="../_images/fig_6_2-01.png" /></p>
+<p>We can quantify the number of possible microstates as the volume of the
+sphere for which all three quantum numbers are positive, or
+<span class="math notranslate nohighlight">\(\frac{\pi R^3}{6}\)</span>. We can write this phase-space volume as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\Theta(\epsilon_{\nu}) &amp;= \frac{\pi R^3}{6} \\ 
+%&amp;= \frac{\pi}{6} \left ( \frac{8mL^2\epsilon_{\nu}}{h^{2}} \right )^{3/2}\\
+&amp;= \frac{\pi}{6} \left( \frac{8m\epsilon_{\nu}}{h^2}\right )^{3/2} V
+\end{aligned}\end{split}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(V=L^3\)</span> is the volume of the physical system, while <span class="math notranslate nohighlight">\(R^3\)</span>
+defines the volume of the phase space. What we really want is an
+expression for the degeneracy of a particular energy level
+<span class="math notranslate nohighlight">\(\epsilon_{\nu}\)</span> - this can then be approximated as the number of states
+with an energy between <span class="math notranslate nohighlight">\(\epsilon_{\nu}\)</span> and
+<span class="math notranslate nohighlight">\(\epsilon_{\nu} + \Delta\epsilon_{\nu}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\omega_\nu &amp;= \Theta(\epsilon_{\nu} + \Delta\epsilon_{\nu}) - \Theta(\epsilon_{\nu}) \\
+&amp;= \frac{\Delta \Theta{\epsilon_{\nu}}}{\Delta \epsilon_{\nu}} \Delta \epsilon_{\nu}
+\end{aligned}\end{split}\]</div>
+<p>We now assume the difference in energy <span class="math notranslate nohighlight">\(\Delta \epsilon_{\nu}\)</span> is
+extremely small, such that
+<span class="math notranslate nohighlight">\(\Delta \epsilon_{\nu} \rightarrow d\epsilon_{\nu}\)</span>. This approximation
+then gives us the volume of an extremely thin shell of phase space, and
+therefore is a reasonable approximation for the number of states on the
+surface of our sphere. We can thus approximate the degeneracy as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\omega_{\nu} &amp;\approx \frac{d\Theta{\epsilon_{\nu}}}{d\epsilon_{\nu}}  d\epsilon_{\nu} \\
+&amp;= \frac{d}{d\epsilon_{\nu}} \left( \frac{\pi}{6} \left( \frac{8m\epsilon_{\nu}}{h^2}\right )^{3/2} V \right )  d\epsilon_{\nu}\\
+&amp;= \frac{\pi}{4}  \left( \frac{8m}{h^2}\right )^{3/2} V \epsilon_{\nu}^{1/2} d\epsilon_{\nu} \label{eq6.20}
+\end{aligned}\end{split}\]</div>
+<p>Substituting this expression into our partition function gives:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+z &amp;=  \sum_{\nu}^\infty\frac{\pi}{4}  \left( \frac{8m}{h^2}\right )^{3/2} V \epsilon_{\nu}^{1/2}   e^{-\beta \epsilon_{\nu}} d\epsilon_{\nu} \\
+&amp;= \frac{\pi}{4}  \left( \frac{8m}{h^2}\right )^{3/2} V  \sum_{\nu}^\infty \epsilon_{\nu}^{1/2}   e^{-\beta\epsilon_{\nu} } d\epsilon_{\nu}
+\end{aligned}\end{split}\]</div>
+</section>
+<section id="ideal-gas-partition-function-in-the-classical-limit">
+<h2>Ideal gas partition function in the classical limit<a class="headerlink" href="#ideal-gas-partition-function-in-the-classical-limit" title="Link to this heading">#</a></h2>
+<p>The previous expression has now assumed that the quantum numbers are
+effectively continuous in space. To simplify this expression further, we
+further assume that the sum over all energies can be converted to an
+integral because the differences in the energy between states,
+<span class="math notranslate nohighlight">\(\Delta \epsilon\)</span>, is much smaller than <span class="math notranslate nohighlight">\(k_BT\)</span>, such that the energy
+states are also effectively continuous (which is consistent with the
+assumption that quantum numbers are continuous).</p>
+<p>Converting a sum to an
+integral is equivalent to what we did when discussing Stirling’s
+approximation - we can think of the sum over energies as performing
+rectangular integration of the energy vs. <span class="math notranslate nohighlight">\(\nu\)</span>, and as the difference
+between consecutive terms in the sum becomes small, rectangular
+integration can be well-approximated using a continuous integral.</p>
+<dl class="simple glossary">
+<dt id="term-classical-limit">classical limit<a class="headerlink" href="#term-classical-limit" title="Link to this term">#</a></dt><dd><p>The assumption that energies are continuous in a macroscopic
+system; requires that incrementing the quantum numbers by one leads to a very
+small change in the energy (<span class="math notranslate nohighlight">\(\approx 10^{-9} k_B T\)</span>).</p>
+</dd>
+</dl>
+<p>In the
+classical limit the partition function becomes:</p>
+<div class="math notranslate nohighlight">
+\[z = \frac{\pi}{4}  \left( \frac{8m}{h^2}\right )^{3/2} V \int_0^\infty   \epsilon_{\nu}^{1/2}  e^{-\beta \epsilon_{\nu} } d\epsilon_{\nu}\]</div>
+<p>Simplifying yields our
+final expression for the single-particle partition function for the
+ideal gas:</p>
+<div class="admonition-z-left-frac-2-pi-m-k-bt-h-2-right-3-2-v admonition">
+<p class="admonition-title"><span class="math notranslate nohighlight">\(z = \left( \frac{2\pi m k_BT}{h^2}\right )^{3/2} V\)</span></p>
+<details><summary> Hints </summary>
+<p>We can analytically solve this expression by defining
+<span class="math notranslate nohighlight">\(u = \beta\epsilon_{\nu}\)</span> and recognizing the standard integral
+<span class="math notranslate nohighlight">\(\int_0^\infty u^{1/2}e^{-u} du = \sqrt{\pi}/2\)</span>.</p>
+</details>
+<details><summary> Show derivation </summary>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+z &amp;= \frac{\pi}{4}  \left( \frac{8m}{h^2}\right )^{3/2} V \int_0^\infty   \epsilon_{\nu}^{1/2}  e^{-\beta\epsilon_{\nu} } d\epsilon_{\nu} \\
+&amp;=  \frac{\pi}{4}  \left( \frac{8m}{h^2}\right )^{3/2} V (k_BT)^{3/2} \int_0^\infty u^{1/2} e^{-u} du \\
+&amp;= \frac{\pi}{4}  \left( \frac{8 m k_BT}{h^2}\right )^{3/2} V \left ( \frac{\pi^{1/2}}{2} \right ) \\
+&amp;= \left( \frac{2\pi m k_BT}{h^2}\right )^{3/2} V
+\end{aligned}\end{split}\]</div>
+</details>
+</div>
+<p>Finally, we write the full partition function of the system, remembering
+that the particles are indistinguishable, as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Z &amp;= \frac{z^N}{N!} \\ 
+&amp;= \frac{1}{N!} \left( \frac{2\pi m k_BT}{h^2}\right )^{3N/2} V^N \\
+&amp;= \frac{1}{N!} \left ( \frac{V}{\lambda^3} \right )^N
+\end{aligned}\end{split}\]</div>
+<p>In the last line, we define:</p>
+<div class="math notranslate nohighlight">
+\[\lambda = \sqrt{\frac{h^2}{2\pi m k_BT}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Thermal_de_Broglie_wavelength">thermal de Broglie wavelength</a>
+which has units
+of length and is a function of <span class="math notranslate nohighlight">\(T\)</span>; this simplifies our notation and
+defines a characteristic length scale for treating a gas classically -
+if <span class="math notranslate nohighlight">\(V \gg \lambda^3\)</span>, which we will generally assume to be the case,
+then the classical limit is reasonable.</p>
+</section>
+<section id="thermodynamic-relationships-of-the-ideal-gas-partition-function">
+<h2>Thermodynamic relationships of the ideal gas partition function<a class="headerlink" href="#thermodynamic-relationships-of-the-ideal-gas-partition-function" title="Link to this heading">#</a></h2>
+<p>We have now performed the first two steps in our approach by identifying
+an expression for the energy of a microstate of our system and
+calculating the corresponding partition function (in the classical
+limit) from the single-particle partition function. We can next derive
+thermodynamic relationships using the connection between the canonical
+partition function and the Helmholtz free energy.</p>
+<p>Let us first calculate
+the ensemble-average pressure of an ideal gas:</p>
+<div class="admonition-show-that-pv-nrt-where-r-n-ak-b admonition">
+<p class="admonition-title">Show that <span class="math notranslate nohighlight">\(PV=NRT\)</span>, where <span class="math notranslate nohighlight">\(R=N_Ak_B\)</span>.</p>
+<details><summary>Show derivation</summary>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\langle P \rangle &amp;= P = -\left ( \frac{\partial F }{\partial V}\right )_{N,T} \\
+&amp;= k_B T \left ( \frac{\partial \ln Z }{\partial V}\right )_{N,T} \\
+\ln Z &amp;=  N\ln V + \ln \left [ \frac{1}{N!} \left( \frac{2\pi m k_BT}{h^2}\right )^{3N/2} \right ] \\
+P &amp;= N k_B T   \frac{1}{V} \\
+\therefore PV &amp;= N k_B T
+\end{aligned}\end{split}\]</div>
+<p>This expression for the pressure is the familiar ideal gas equation of
+state, derived <strong>solely</strong> from statistical mechanics. Note that <span class="math notranslate nohighlight">\(R\)</span>, the
+ideal gas constant, is related to <span class="math notranslate nohighlight">\(k_B\)</span> by a constant factor of
+Avogadro’s constant, <span class="math notranslate nohighlight">\(N_A\)</span>, or <span class="math notranslate nohighlight">\(R = N_A k_B\)</span>. Basically, this is just a
+unit conversion. The only input to obtain this relationship is an energy
+function from quantum mechanics - therefore this is entirely a
+first-principles derivation that does not rely on empirical
+measurements. In the third line we divided the partition function into a
+term that is a function of <span class="math notranslate nohighlight">\(V\)</span> and one that is not; the second term does
+not contribute to the expression for <span class="math notranslate nohighlight">\(P\)</span>.</p>
+</div>
+<p>We can next calculate the average energy of an ideal gas.</p>
+<div class="admonition-show-that-internal-energy-e-frac-3-n-k-bt-2 admonition">
+<p class="admonition-title">Show that internal energy <span class="math notranslate nohighlight">\(E = \frac{3 N k_BT}{2}\)</span>.</p>
+<details><summary>Hints</summary>
+<p>Recall that we
+can relate the energy to the canonical partition function (from a
+<a class="reference internal" href="Lecture4.html"><span class="std std-doc">previous lecture</span></a>) via:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+E &amp;= - \left ( \frac{\partial \ln Z}{\partial \beta}\right )_{N,V} \\
+&amp;= k_B T^2 \left ( \frac{\partial \ln Z}{\partial T}\right)_{N,V}
+\end{aligned}\end{split}\]</div>
+</details>
+<details><summary>Show derivation</summary>
+<p>We write out the partition function and
+separate into the temperature-dependent and temperature-independent
+terms:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\ln Z &amp;=  \ln \left [ \frac{1}{N!} \left( \frac{2\pi m k_BT}{h^2}\right )^{3N/2} V^N \right ] \\
+&amp;= \frac{3N}{2} \ln T + \ln \left [ \frac{1}{N!} \left( \frac{2\pi m k_B}{h^2}\right )^{3N/2} V^N \right ]
+\end{aligned}\end{split}\]</div>
+<p>Taking the derivative gives:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+E &amp;= k_B T^2 \frac{3N}{2T} \\
+&amp;= \frac{3 N k_BT}{2}
+\end{aligned}\end{split}\]</div>
+<p>This again is a familiar expression - the internal energy of an ideal
+gas depends only on the temperature, and we obtain the same prefactors
+as in thermodynamics.</p>
+</details>
+</div>
+<p>We can now easily also calculate the heat capacity
+at constant volume, <span class="math notranslate nohighlight">\(C_V\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+C_V &amp;= \left ( \frac{\partial  E  }{\partial T}\right )_{N,V} \\
+&amp;= \frac{3 }{2}N k_B
+\end{aligned}\end{split}\]</div>
+<p>These last two results are manifestations of the</p>
+<dl class="simple glossary">
+<dt id="term-equipartition-theorem"><a class="reference external" href="https://en.wikipedia.org/wiki/Equipartition_theorem">equipartition theorem</a><a class="headerlink" href="#term-equipartition-theorem" title="Link to this term">#</a></dt><dd><p>any degree of freedom that appears
+quadratically in the energy of a system contributes <span class="math notranslate nohighlight">\(1/2 k_BT\)</span> to the
+internal energy and contributes <span class="math notranslate nohighlight">\(1/2 k_B\)</span> to the heat capacity in the
+classical limit</p>
+</dd>
+</dl>
+<p>Here, there are 3 translational degrees of freedom
+corresponding to the three quantum numbers that each contribute a
+quadratic energy term (the kinetic energy) for each of the <span class="math notranslate nohighlight">\(N\)</span> atoms,
+leading to <span class="math notranslate nohighlight">\(\frac{3 }{2}N k_B\)</span> for the heat capacity as we found.</p>
+<p>Finally, we can compute the chemical potential of an ideal gas using the
+ideal gas partition function:</p>
+<div class="admonition-show-that-mu-mu-0-t-k-b-t-ln-rho admonition">
+<p class="admonition-title">Show that <span class="math notranslate nohighlight">\(\mu = \mu_0(T) + k_B T \ln \rho\)</span>.</p>
+<details><summary>Hints</summary>
+<div class="math notranslate nohighlight">
+\[\mu = \left ( \frac{\partial F }{\partial N}\right )_{T,V}\]</div>
+</details>
+<details><summary>Show derivation</summary>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mu &amp;= \left ( \frac{\partial F }{\partial N}\right )_{T,V} \\
+&amp;= -k_B T \left ( \frac{\partial \ln Z }{\partial N}\right )_{T,V} \\
+\ln Z &amp;= \ln \left ( \frac{z^N}{N!}\right ) \\
+&amp;= N \ln z - \ln N! \\
+&amp;= N \ln  \left [\left( \frac{2\pi m k_BT}{h^2}\right )^{3/2} V \right ] - N \ln N + N \\
+\mu &amp;= -k_B T \left [ \ln \left( \frac{2\pi m k_BT}{h^2}\right )^{3/2} V  - \ln N  \right ] \\
+&amp;= -k_B T \ln \left( \frac{2\pi m k_BT}{h^2}\right )^{3/2} + k_B T \ln \frac{N}{V} \\
+&amp;= \mu_0(T) + k_B T \ln \rho
+\end{aligned}\end{split}\]</div>
+</details>
+</div>
+<p>The last formula expresses the chemical potential in terms of a first
+term, which is temperature dependent but concentration (<span class="math notranslate nohighlight">\(\rho\)</span>)
+independent, and then a second concentration-dependent term. This form
+for the chemical potential is again exactly what is observed for ideal
+gases in classical thermodynamics.</p>
+</section>
+<section id="link-to-shared-notes">
+<h2><a class="reference external" href="https://docs.google.com/document/d/1eAek5NU2JEa6TlELNmm16em7HD9G4b6v/edit?usp=drive_link&amp;amp;ouid=113272049620170441297&amp;amp;rtpof=true&amp;amp;sd=true">Link to Shared Notes</a><a class="headerlink" href="#link-to-shared-notes" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lecture_files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lecture5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Generalized ensembles</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Lecture7.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Application of independent subsystems: the Langmuir isotherm</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-readings-for-the-enthusiast">Additional Readings for the Enthusiast</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-for-today-s-lecture">Goals for today’s lecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factorization-of-the-partition-function">Factorization of the partition function</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#over-counting-in-the-partition-function">Over-counting in the partition function</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">The ideal gas partition function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-partition-function-in-the-classical-limit">Ideal gas partition function in the classical limit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-relationships-of-the-ideal-gas-partition-function">Thermodynamic relationships of the ideal gas partition function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-to-shared-notes">Link to Shared Notes</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Reid van Lehn, Matt Gebbie, Rose K. Cersonsky
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

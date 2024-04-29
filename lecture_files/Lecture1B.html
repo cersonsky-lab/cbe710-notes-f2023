@@ -1,0 +1,1016 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Review of thermodynamics &#8212; Advanced Thermodynamics for Chemical Engineers</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture_files/Lecture1B';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Postulates of statistical mechanics" href="Lecture2.html" />
+    <link rel="prev" title="Overview" href="Lecture1A.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Advanced Thermodynamics for Chemical Engineers</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Class introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Before we get started</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture1A.html">Overview</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Review of thermodynamics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture2.html">Postulates of statistical mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture3.html">Application of the microcanonical ensemble: two-state system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture4.html">The canonical ensemble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture5.html">Generalized ensembles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture6.html">The ideal gas partition function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture7.html">Application of independent subsystems: the Langmuir isotherm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture8A.html">The Ising model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture8B.html">Mean-field theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture9A.html">Fluctuations and thermodynamic response functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistical Mechanics Problem Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_1/problem_set_1.html">Problem Set 1 (Due Wednesday, September 20, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_2/problem_set_2.html">Problem Set 2 (Due Wednesday, September 27, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_3/problem_set_3.html">Problem Set 3 (Due Monday, October 9, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Molecular Simulation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture9B.html">An introduction to molecular simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture10.html">Monte Carlo simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture11.html">Nuances of stochastic sampling in statistical ensembles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture12A.html">Molecular dynamics simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture12B.html">Temperature and velocities in MD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture13.html">Distribution of particles in states of matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture14A.html">The potential of mean force</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture14B.html">Umbrella Sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture15.html">Free energy perturbation and thermodynamic integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Molecular Simulation Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problems/simulation_project.html">Simulation Project (Due Monday, November 6, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lecture16.html">Postulates of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture17.html">Heat engines and possible processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture18.html">The Carnot Cycle and the Theorem of Clausius</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture19.html">The fundamental relation of thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture20.html">Legendre transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture21.html">Conditions of equilibrium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture22.html">Equilibrium in single-component systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture23.html">Phase diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture24.html">Fugacity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture25.html">Ideal mixtures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lecture26.html">Non-ideal mixtures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermodynamics Problem Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_4/problem_set_4.html">Problem Set 4 (Due Wednesday, November 22, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_5/problem_set_5.html">Problem Set 5 (Due Wednesday, November 29, 2023)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/ps_6/problem_set_6.html">Problem Set 6 (Due Wednesday, December 6, 2023)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../appendices/notation.html">Additional Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/thermo_pot.html">Summary of thermodynamic potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/expansion.html">Derivation of expansion rule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/euler.html">Derivation of Euler integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/references.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lecture_files/Lecture1B.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Review of thermodynamics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-for-today-s-lecture">Goals for today’s lecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-the-system">Description of the system</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-variables">Thermodynamic variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#work-and-heat">Work and heat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work">Work</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat">Heat</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy">Entropy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fundamental-relation-of-thermodynamics">The fundamental relation of thermodynamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugate-variables">Conjugate Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-variables">Natural variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibrium">Equilibrium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-thermodynamic-potentials">Additional thermodynamic potentials</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-to-shared-notes">Link to Shared Notes</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="review-of-thermodynamics">
+<h1>Review of thermodynamics<a class="headerlink" href="#review-of-thermodynamics" title="Link to this heading">#</a></h1>
+<p>We will begin this course by focusing largely on statistical mechanics.
+It is assumed that most students have taken thermodynamics at the
+undergraduate level, and thus will be familiar with some basic concepts
+that will be re-visited later in the course. We will first briefly
+review thermodynamic concepts that will prove necessary for studying
+statistical mechanics.</p>
+<section id="goals-for-today-s-lecture">
+<h2>Goals for today’s lecture<a class="headerlink" href="#goals-for-today-s-lecture" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>How do we describe thermodynamic systems?</p></li>
+<li><p>What is the difference between a state variable and a path-dependent variable? What are some examples?</p></li>
+<li><p>What are natural variables?</p></li>
+<li><p>What is equilibrium?</p></li>
+<li><p>Given a set of natural variables, how do I define a new thermodynamic potential?</p></li>
+</ul>
+</section>
+<section id="description-of-the-system">
+<h2>Description of the system<a class="headerlink" href="#description-of-the-system" title="Link to this heading">#</a></h2>
+<p>Let’s start with definitions:</p>
+<dl class="simple glossary">
+<dt id="term-system">system<a class="headerlink" href="#term-system" title="Link to this term">#</a></dt><dd><p>the part of the universe that we seek to study. A system is defined by its <em>contents</em> and <em>boundaries</em></p>
+</dd>
+<dt id="term-boundaries">boundaries<a class="headerlink" href="#term-boundaries" title="Link to this term">#</a></dt><dd><p>the interface between our system and the surrounding world</p>
+</dd>
+<dt id="term-surroundings">surroundings<a class="headerlink" href="#term-surroundings" title="Link to this term">#</a></dt><dt id="term-environment">environment<a class="headerlink" href="#term-environment" title="Link to this term">#</a></dt><dd><p>the part of the universe in contact with our system</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Systems and their boundaries are described by the following terms</p>
+<a class="reference internal image-reference" href="../_images/fig_1B_1-01.png"><img alt="Closed and open Carcassone tiles" class="align-center" src="../_images/fig_1B_1-01.png" style="width: 400px;" /></a>
+<p>    </p>
+<dl class="simple glossary">
+<dt id="term-Closed">Closed<a class="headerlink" href="#term-Closed" title="Link to this term">#</a></dt><dd><p>mass does not flow into or out of a closed system (the
+boundaries are impermeable).</p>
+</dd>
+<dt id="term-Open">Open<a class="headerlink" href="#term-Open" title="Link to this term">#</a></dt><dd><p>mass can flow into or out of an open system (the
+boundaries are permeable).</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="../_images/fig_1B_2-01.png"><img alt="Rigid and movable boundaries" class="align-center" src="../_images/fig_1B_2-01.png" style="width: 400px;" /></a>
+<p>    </p>
+<dl class="simple glossary">
+<dt id="term-Rigid">Rigid<a class="headerlink" href="#term-Rigid" title="Link to this term">#</a></dt><dd><p>the volume of the system is constant.</p>
+</dd>
+<dt id="term-Movable">Movable<a class="headerlink" href="#term-Movable" title="Link to this term">#</a></dt><dd><p>the volume of the system can change.</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="../_images/fig_1B_3-01.png"><img alt="Adiabatic and diathermal" class="align-center" src="../_images/fig_1B_3-01.png" style="width: 400px;" /></a>
+<p>    </p>
+<dl class="simple glossary">
+<dt id="term-Adiabatic-Insulated">Adiabatic/Insulated<a class="headerlink" href="#term-Adiabatic-Insulated" title="Link to this term">#</a></dt><dd><p>adiabatic/insulated boundaries prevent the
+transfer of heat/energy.</p>
+</dd>
+<dt id="term-Diathermal">Diathermal<a class="headerlink" href="#term-Diathermal" title="Link to this term">#</a></dt><dd><p>diathermal boundaries allow the transfer of
+heat/energy.</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="../_images/fig_1B_4.jpeg"><img alt="Adiabatic and diathermal" class="align-center" src="../_images/fig_1B_4.jpeg" style="width: 400px;" /></a>
+<p>    </p>
+<dl class="simple glossary">
+<dt id="term-Isolated">Isolated<a class="headerlink" href="#term-Isolated" title="Link to this term">#</a></dt><dd><p>an isolated system is closed, rigid, and adiabatic.</p>
+</dd>
+</dl>
+</section>
+<section id="thermodynamic-variables">
+<h2>Thermodynamic variables<a class="headerlink" href="#thermodynamic-variables" title="Link to this heading">#</a></h2>
+<p>We will define two different types of thermodynamic variables:</p>
+<dl class="simple glossary">
+<dt id="term-Extensive">Extensive<a class="headerlink" href="#term-Extensive" title="Link to this term">#</a></dt><dd><p>variables depend on the size or amount of material in the
+system. If a system is formed from two subsystems, the extensive
+properties of the combined system are equal to the sum of the extensive
+properties of the subsystems. <em>For example, the volume and internal
+energy are extensive variables.</em></p>
+</dd>
+<dt id="term-Intensive">Intensive<a class="headerlink" href="#term-Intensive" title="Link to this term">#</a></dt><dd><p>variables do not increase
+as the size or amount of the system increases. <em>For example, the
+temperature and pressure are <em>always</em> intensive variables.</em></p>
+</dd>
+</dl>
+<p>The ratio of extensive variables (typically an extensive variable divided by the
+amount of material) also defines an intensive variable - for example,
+the molar volume is an intensive variable. Variables defined by dividing
+an extensive variable by the number of particles are sometimes called
+<strong>specific properties</strong>, although we will not frequently use that
+nomenclature. Conversely, multiplying always intensive variables
+(temperature and pressure) by the amount of material does not yield a
+meaningful extensive parameter. We will further discuss the definition
+of always intensive variables in the material below.</p>
+<p>Combining the above, we can consider a gas with <span class="math notranslate nohighlight">\(N\)</span> particles in a
+volume <span class="math notranslate nohighlight">\(V\)</span>, temperature <span class="math notranslate nohighlight">\(T\)</span>, and pressure <span class="math notranslate nohighlight">\(P\)</span>. If this system were
+duplicated and combined, the result would be a gas with <span class="math notranslate nohighlight">\(2N\)</span> particles
+in a volume <span class="math notranslate nohighlight">\(2V\)</span> still at a temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P\)</span> - the
+extensive variables have doubled, but the intensive variables are
+unchanged. If we define the density as a specific property <span class="math notranslate nohighlight">\(\rho=N/V\)</span>,
+it is also unchanged upon doubling the system size.</p>
+</section>
+<section id="work-and-heat">
+<h2>Work and heat<a class="headerlink" href="#work-and-heat" title="Link to this heading">#</a></h2>
+<section id="work">
+<h3>Work<a class="headerlink" href="#work" title="Link to this heading">#</a></h3>
+<a class="reference internal image-reference" href="../_images/fig_1B_5-01.png"><img alt="Demonstration of work" class="align-center" src="../_images/fig_1B_5-01.png" style="width: 400px;" /></a>
+<p>    </p>
+<p>The mechanical work, <span class="math notranslate nohighlight">\(W\)</span>, is the product of an intensive generalized
+force, <span class="math notranslate nohighlight">\(f\)</span>, and an extensive generalized displacement, <span class="math notranslate nohighlight">\(\Delta x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[W = f \Delta x\]</div>
+<p>We will define the work as positive if the work is done <em>on</em> the system
+by the environment. In differential form, this can be written:</p>
+<div class="math notranslate nohighlight" id="equation-pvwork">
+<span class="eqno">(5)<a class="headerlink" href="#equation-pvwork" title="Link to this equation">#</a></span>\[\begin{split}dW &amp;= fdx \\
+W &amp;= \int_A^B fdx\end{split}\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> indicate the initial and final thermodynamic states
+connected by some process. Thermodynamic states are defined by the
+values of thermodynamic variables - each state would have a
+corresponding volume, temperature, pressure, number of particles, etc.
+The process is defined by a specific path through intermediate states
+(or non-equilibrium states) as we will discuss again shortly.</p>
+<a class="reference internal image-reference" href="../_images/fig_1B_6-01.png"><img alt="Demonstration of pressure-volume work" class="align-center" src="../_images/fig_1B_6-01.png" style="width: 400px;" /></a>
+<p>    </p>
+<p>The most
+common example of work we will see is pressure-volume work, or the work
+done due to an expansion or compression of a system.</p>
+<p>For expansion-contraction work, the generalized force, <span class="math notranslate nohighlight">\(f\)</span> is equal to the
+negative pressure, <span class="math notranslate nohighlight">\(-P\)</span> (by convention) and the generalized displacement
+is equal to the change in the volume, <span class="math notranslate nohighlight">\(V\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-pvwork-differential">
+<span class="eqno">(6)<a class="headerlink" href="#equation-pvwork-differential" title="Link to this equation">#</a></span>\[dW = -PdV\]</div>
+<p>An increase in the system’s volume is associated with work being done in
+the surroundings. There are many <em>types</em> of work, as summarized below.
+The differential parameter here is always extensive, while the prefactor
+is always intensive. These
+pairs of intensive-extensive variables are referred to as <strong>conjugate
+variables</strong>.</p>
+<p>Some of you may not have extensively discussed the chemical
+potential. Still, it is a quantity conceptually identical to the
+fugacity (and used in its definition) as we will discuss <a class="reference internal" href="Lecture24.html"><span class="std std-doc">much later in
+the course</span></a>.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Type of Work</strong></p></th>
+<th class="head"><p><strong>Equation</strong></p></th>
+<th class="head"><p><strong>Intensive Property</strong></p></th>
+<th class="head"><p><strong>Extensive Property</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Chemical</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu dN\)</span></p></td>
+<td><p>chemical potential <span class="math notranslate nohighlight">\(\mu\)</span></p></td>
+<td><p>number of molecules in a system <span class="math notranslate nohighlight">\(N\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Surface Deformation</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sigma dA\)</span></p></td>
+<td><p>stress <span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
+<td><p>area <span class="math notranslate nohighlight">\(A\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Elongation</p></td>
+<td><p><span class="math notranslate nohighlight">\(\tau dL\)</span></p></td>
+<td><p>tension <span class="math notranslate nohighlight">\(\tau\)</span></p></td>
+<td><p>length <span class="math notranslate nohighlight">\(L\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Magnetic</p></td>
+<td><p><span class="math notranslate nohighlight">\(H dM\)</span></p></td>
+<td><p>magnetic field <span class="math notranslate nohighlight">\(H\)</span></p></td>
+<td><p>magnetization <span class="math notranslate nohighlight">\(M\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="heat">
+<h3>Heat<a class="headerlink" href="#heat" title="Link to this heading">#</a></h3>
+<p>The heat absorbed by (added to) the system from its surroundings during
+as it goes from state <span class="math notranslate nohighlight">\(A\)</span> to state <span class="math notranslate nohighlight">\(B\)</span> is</p>
+<div class="math notranslate nohighlight" id="equation-heat">
+<span class="eqno">(7)<a class="headerlink" href="#equation-heat" title="Link to this equation">#</a></span>\[Q = \int_A^B dQ\]</div>
+<p>Both work and heat (equations <a class="reference internal" href="#equation-pvwork">(5)</a> and <a class="reference internal" href="#equation-heat">(7)</a>)
+rely on integrals that depend on the exact path taken
+between state <span class="math notranslate nohighlight">\(A\)</span> and state <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>However, the difference in the internal
+energy, <span class="math notranslate nohighlight">\(E\)</span>, between state <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> does not depend on the path. <span class="math notranslate nohighlight">\(E\)</span>
+is thus called a</p>
+<dl class="simple glossary">
+<dt id="term-state-function">state function<a class="headerlink" href="#term-state-function" title="Link to this term">#</a></dt><dd><p>a function that is a property of each state and not the path between them</p>
+</dd>
+</dl>
+<p>We can write the change in <span class="math notranslate nohighlight">\(E\)</span>
+between states <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(\Delta E\)</span>, for a system undergoing a change
+in volume as the:</p>
+<dl class="glossary">
+<dt id="term-first-law-of-thermodynamics">first law of thermodynamics<a class="headerlink" href="#term-first-law-of-thermodynamics" title="Link to this term">#</a></dt><dd><div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \Delta E = E_B - E_A &amp;= Q + W \\
+    &amp;= \int_A^B dQ - \int_A^B PdV
+\end{aligned}\end{split}\]</div>
+</dd>
+</dl>
+<p>This equation is the <a class="reference internal" href="#term-first-law-of-thermodynamics"><span class="xref std std-term">first law of thermodynamics</span></a> and defines the
+conservation of energy. Note that since each path passes through
+intermediate states which may vary in pressure, <span class="math notranslate nohighlight">\(P\)</span> is within the
+integral above as its value will depend on the specific path taken. The
+same change in energy will be obtained for any arbitrary path, though,
+so we are free to calculate the change in energy along the path that is
+most convenient for a given calculation (<em>e.g.</em>, along a path for which
+the pressure is constant).</p>
+<p><img alt="image" src="../_images/fig_1B_7-01.png" /></p>
+</section>
+</section>
+<section id="entropy">
+<h2>Entropy<a class="headerlink" href="#entropy" title="Link to this heading">#</a></h2>
+<p>The second law of thermodynamics defines another <a class="reference internal" href="#term-state-function"><span class="xref std std-term">state function</span></a> called
+the <strong>entropy</strong>, <span class="math notranslate nohighlight">\(S\)</span>. Entropy is conceptually equivalent to the amount
+of uncertainty pertaining to any given macrostate (more on this later).
+The combined entropy of a system and its surroundings (<em>i.e.</em>, the
+universe) always increases in an irreversible process and remains
+constant in a reversible process; it never decreases. The entropy of the
+system can decrease as long as there is a corresponding increase in the
+entropy of the surroundings such that the total entropy of the universe
+is constant or increases. The change in entropy between states <span class="math notranslate nohighlight">\(A\)</span> and
+<span class="math notranslate nohighlight">\(B\)</span> is <span class="math notranslate nohighlight">\(\Delta S = \int_A^B dS = \int_A^B  \frac{dQ_{\mathrm{rev}}}{T}\)</span>,
+therefore:</p>
+<div class="math notranslate nohighlight" id="equation-entropychange">
+<span class="eqno">(8)<a class="headerlink" href="#equation-entropychange" title="Link to this equation">#</a></span>\[    dQ_{\mathrm{rev}} = TdS\]</div>
+<p>The subscript on <span class="math notranslate nohighlight">\(dQ\)</span> indicates that the change in entropy is defined
+along a <em>reversible</em> path from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(B\)</span>. For irreversible processes,
+the second law of thermodynamics states</p>
+<div class="math notranslate nohighlight" id="equation-entropychange-nonrev">
+<span class="eqno">(9)<a class="headerlink" href="#equation-entropychange-nonrev" title="Link to this equation">#</a></span>\[\Delta S &gt; \int_A^B  \frac{dQ}{T}\]</div>
+<div class="admonition-what-is-the-lower-limit-for-entropy-in-an-isolated-system admonition">
+<p class="admonition-title">What is the lower limit for entropy in an isolated system?</p>
+<details>
+  <summary><b></b>[Click for answer]</summary>
+  In an isolated system, dQ = 0 for all processes since no heat can exchange with
+the universe. Therefore, S is always greater than or equal to 0.
+</details>
+</div>
+</section>
+<section id="the-fundamental-relation-of-thermodynamics">
+<h2>The fundamental relation of thermodynamics<a class="headerlink" href="#the-fundamental-relation-of-thermodynamics" title="Link to this heading">#</a></h2>
+<p>For a system undergoing a reversible process, we can write a combined
+first and second law of thermodynamics (assuming a one-component system)
+by combining equations
+<a class="reference internal" href="#equation-pvwork-differential">(6)</a> and
+<a class="reference internal" href="#equation-entropychange">(8)</a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+dE &amp;= dQ + dW \\
+&amp;= TdS - PdV \label{combo_first_second}
+\end{aligned}\end{split}\]</div>
+<p>This expression is also called the <a class="reference external" href="https://en.wikipedia.org/wiki/Fundamental_thermodynamic_relation"><strong>fundamental relation</strong></a> of
+thermodynamics in the <strong>energy representation</strong>. We can write an
+equivalent expression in terms of the entropy:</p>
+<div class="math notranslate nohighlight">
+\[dS = \frac{1}{T} dE + \frac{P}{T} dV\]</div>
+<p>This is called the fundamental relation in the entropy representation.
+Because energy is a <strong>state variable</strong> can also write an <a class="reference external" href="https://en.wikipedia.org/wiki/Exact_differential"><strong>exact differential</strong></a> of <span class="math notranslate nohighlight">\(dE\)</span> to obtain
+expressions for an intensive variables:</p>
+<div class="math notranslate nohighlight">
+\[dE = \left( \frac{\partial E}{\partial S}\right)_V dS + \left( \frac{\partial E}{\partial V}\right)_S dV\]</div>
+<p>Comparing this expression with the fundamental relation in the energy
+representation yields:</p>
+<div class="math notranslate nohighlight" id="equation-de-ds">
+<span class="eqno">(10)<a class="headerlink" href="#equation-de-ds" title="Link to this equation">#</a></span>\[\left( \frac{\partial E}{\partial S}\right)_V = T\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-de-dv">
+<span class="eqno">(11)<a class="headerlink" href="#equation-de-dv" title="Link to this equation">#</a></span>\[\left( \frac{\partial E}{\partial V}\right)_S = -P\]</div>
+<p>The subscripts indicate that the partial derivative is taken with the
+subscripted variable held constant; in other words, Equation <a class="reference internal" href="#equation-de-ds">(10)</a>
+states that the temperature is defined as the partial derivative of the internal
+energy with respect to entropy at constant volume. Using these
+relations, we find that for each pair of conjugate variables that
+appears in the fundamental relation, the variable that is always
+intensive can be expressed as a partial derivative of either the energy
+or the entropy with respect to its conjugate extensive variable and with
+all other extensive variables held constant.</p>
+</section>
+<section id="conjugate-variables">
+<h2>Conjugate Variables<a class="headerlink" href="#conjugate-variables" title="Link to this heading">#</a></h2>
+<p>Each pair of variables that appear in our fundamental relations is called a pair
+of <a class="reference external" href="https://en.wikipedia.org/wiki/Conjugate_variables_(thermodynamics)"><strong>conjugate variables</strong></a>, consisting of an intensive prefactor and
+extensive differential. The four most common sets of conjugate pairs
+that we will discuss are:</p>
+<ul class="simple">
+<li><p>Temperature (<span class="math notranslate nohighlight">\(T\)</span>, intensive) and entropy (<span class="math notranslate nohighlight">\(S\)</span>, extensive)</p></li>
+<li><p>Temperature (<span class="math notranslate nohighlight">\(T\)</span>, intensive) and energy (<span class="math notranslate nohighlight">\(E\)</span>, extensive; from
+entropy representation of fundamental relation, where <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(S\)</span> swap roles)</p></li>
+<li><p>Pressure (<span class="math notranslate nohighlight">\(P\)</span>, intensive) and volume (<span class="math notranslate nohighlight">\(V\)</span>, extensive)</p></li>
+<li><p>Chemical potential (<span class="math notranslate nohighlight">\(\mu\)</span>, intensive) and number of particles (<span class="math notranslate nohighlight">\(N\)</span>,
+extensive)</p></li>
+</ul>
+</section>
+<section id="natural-variables">
+<h2>Natural variables<a class="headerlink" href="#natural-variables" title="Link to this heading">#</a></h2>
+<p>We can extend the fundamental relation to include additional work terms
+(<em>i.e.</em>, additional conjugate pairs) by writing:</p>
+<div class="math notranslate nohighlight">
+\[dE = TdS - PdV + \mu dN + \text{other work terms}\]</div>
+<p>We will typically omit work terms other than pressure-volume and
+chemical work unless required to include them by a specific problem.</p>
+<p>In our previous sections, we have shown how we can write our intensive
+variables (<span class="math notranslate nohighlight">\(T, -P, \mu\)</span>) as a partial derivative of the internal energy with respect to its
+conjugate extensive variable.
+Therefore, we could write our fundamental relation <em>without</em> these variables,
+instead only in terms of <span class="math notranslate nohighlight">\(N\)</span>, <span class="math notranslate nohighlight">\(V\)</span>, and <span class="math notranslate nohighlight">\(S\)</span>.
+Because of this, <span class="math notranslate nohighlight">\(N\)</span>, <span class="math notranslate nohighlight">\(V\)</span>, and <span class="math notranslate nohighlight">\(S\)</span> are called the <strong>natural variables</strong> of the internal
+energy.</p>
+<dl class="simple glossary">
+<dt id="term-natural-variables">natural variables<a class="headerlink" href="#term-natural-variables" title="Link to this term">#</a></dt><dd><p>the variables that, if they were held constant, then the corresponding thermodynamic potential would also be constant;
+because of the exact differential relationship between a thermodynamic potential and its natural variables,
+we can write any thermodynamic potential in terms of <em>only</em> its natural variables.</p>
+</dd>
+</dl>
+<div class="admonition-what-is-the-differential-of-internal-energy-de-in-a-system-where-we-hold-n-v-and-s-constant admonition">
+<p class="admonition-title">What is the differential of internal energy (dE) in a system where we hold N, V, and S constant?</p>
+<details>
+  <summary><b></b>[Click for answer]</summary>
+ For any process in which N, V, and S are held constant,  dE = 0 and therefore E(N, V, S) is at an extremum.
+<p>If we were to control the natural variables via suitable
+experimental manipulation, or by imposing the appropriate boundaries on
+a system, we could then predict that the corresponding thermodynamic
+potential would go to an extreme. We will take advantage of this
+behavior later.</p>
+</details>
+</div>
+</section>
+<section id="equilibrium">
+<h2>Equilibrium<a class="headerlink" href="#equilibrium" title="Link to this heading">#</a></h2>
+<p>A system is said to be <strong>at equilibrium</strong> when there is no driving force
+to change intensive variables in the system and the system’s properties
+do not change as a function of time. A system that is at equilibrium is
+described as being in an <strong>equilibrium state</strong> which is fully specified
+by the values of the thermodynamic parameters described above. The three
+most relevant conditions of equilibrium that we will discuss are:</p>
+<dl class="simple glossary">
+<dt id="term-Thermal-equilibrium">Thermal equilibrium<a class="headerlink" href="#term-Thermal-equilibrium" title="Link to this term">#</a></dt><dd><p>if a system has diathermal walls, at
+equilibrium the temperature of the system will be equivalent to the
+temperature of the surroundings, or
+<span class="math notranslate nohighlight">\(T^\textrm{sys} = T^\textrm{surr}\)</span>.</p>
+</dd>
+<dt id="term-Mechanical-equilibrium">Mechanical equilibrium<a class="headerlink" href="#term-Mechanical-equilibrium" title="Link to this term">#</a></dt><dd><p>if a system has movable walls, at
+equilibrium the pressure of the system will be equivalent to the
+pressure of the surroundings, or <span class="math notranslate nohighlight">\(P^\textrm{sys} = P^\textrm{surr}\)</span>.</p>
+</dd>
+<dt id="term-Chemical-equilibrium">Chemical equilibrium<a class="headerlink" href="#term-Chemical-equilibrium" title="Link to this term">#</a></dt><dd><p>if a system has open walls, at equilibrium
+the chemical potential of each component of the system will be
+equivalent to the chemical potential of each component in the
+surroundings, or <span class="math notranslate nohighlight">\(\mu_i^\textrm{sys} = \mu_i^\textrm{surr}\)</span>.</p>
+</dd>
+</dl>
+<p>In each case, the system is free to exchange an extensive variable and
+the corresponding intensive variable is then constant. These pairs of
+variables are again the conjugate pairs mentioned above. A given system
+can satisfy multiple conditions of equilibrium simultaneously.</p>
+<section id="additional-thermodynamic-potentials">
+<h3>Additional thermodynamic potentials<a class="headerlink" href="#additional-thermodynamic-potentials" title="Link to this heading">#</a></h3>
+<p>It is possible to write other expressions, called <strong>thermodynamic
+potentials</strong>, that are equivalent in information content to the
+fundamental relation but have a different set of natural variables. In
+the <a class="reference internal" href="Lecture15.html"><span class="std std-doc">third unit</span></a> of this class, we will show that these relations are
+equivalent; here, we will only focus on the method for defining them.
+The procedure is as follows:</p>
+<ul class="simple">
+<li><p>Identify the desired natural variables of the new potential (e.g.,
+<span class="math notranslate nohighlight">\(N,V,T\)</span>)</p></li>
+<li><p>For any natural variable that is different from the natural
+variables of the internal energy (i.e., <span class="math notranslate nohighlight">\(N,V,S\)</span>), subtract the
+product of the desired natural variable and its conjugate from the
+internal energy, <span class="math notranslate nohighlight">\(E\)</span>. The new expression defines the equivalent
+thermodynamic potential.</p></li>
+</ul>
+<div class="admonition-what-is-the-expression-for-enthalpy-h-whose-natural-variables-are-n-p-and-s admonition">
+<p class="admonition-title">What is the expression for enthalpy H, whose natural variables are N, P, and S?</p>
+<details>
+  <summary><b></b>[Click for answer]</summary>
+<p>This differs from the internal energy by the variable P, so we subtract the
+product of P and its conjugate (V) to generate the expression for
+the enthalpy. The slight caveat here is that in our sign convention it
+is -P, not P, that is used in the conjugate pair, so we subtract
+-P instead:</p>
+<div class="math notranslate nohighlight">
+\[H = E - (-PV) = E + PV\]</div>
+<p>therefore</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+dH &amp;= dE + PdV + VdP\\
+   &amp;= TdS - PdV + \mu dN + PdV + VdP
+   &amp;= TdS + \mu dN + VdP
+\end{split}\]</div>
+</details>
+</div>
+<div class="admonition-write-the-equation-for-enthalpy-only-in-terms-of-its-natural-variables admonition">
+<p class="admonition-title">Write the equation for enthalpy only in terms of its natural variables.</p>
+<details>
+  <summary><b></b>[Click for answer]</summary>
+  Here we replace each non-natural variable with the derivative of enthalpy, holding the appropriate natural variables constant.
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    dH &amp;= \left ( \frac{\partial H}{\partial S}\right )_{P,N} dS + \left ( \frac{\partial H}{\partial P}\right )_{S,N} dP +  \left ( \frac{\partial H}{\partial N}\right )_{S,P} dN \\
+    &amp; \left ( \frac{\partial H}{\partial S}\right )_{P,N} = T \\
+    &amp;   \left ( \frac{\partial H}{\partial P}\right )_{S,N}  = V \\
+    &amp;\left ( \frac{\partial H}{\partial N}\right )_{S,P} = \mu
+\end{aligned}\end{split}\]</div>
+</div>
+<div class="admonition-what-is-the-expression-for-helmholtz-free-energy-f-whose-natural-variables-are-n-v-and-t admonition">
+<p class="admonition-title">What is the expression for Helmholtz free energy F, whose natural variables are N, V, and T?</p>
+<details>
+  <summary><b></b>[Click for answer]</summary>
+<p>This differs from the internal energy by the variable T, so we subtract the
+product of T and its conjugate (S) to generate the expression for
+the Helmholtz free energy.</p>
+<div class="math notranslate nohighlight">
+\[F = E - (TS)\]</div>
+<p>therefore</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+dF &amp;= dE - TdS - SdT\\
+   &amp;= TdS - PdV + \mu dN - TdS - SdT\\
+   &amp;= \mu dN + - PdV - SdT
+\end{split}\]</div>
+</details>
+</div>
+<div class="admonition-what-is-the-expression-for-gibbs-free-energy-g-whose-natural-variables-are-n-p-and-t admonition">
+<p class="admonition-title">What is the expression for Gibbs free energy G, whose natural variables are N, P, and T?</p>
+<details>
+  <summary><b></b>[Click for answer]</summary>
+<p>This differs from the internal energy by the variable T and P, so we subtract the
+products of T and P (and their conjugates) to generate the expression for
+the Helmholtz free energy.</p>
+<div class="math notranslate nohighlight">
+\[G = E - TS + PV\]</div>
+<p>therefore</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+dF &amp;= dE - TdS - SdT + PdV + VdP\\
+   &amp;= TdS - PdV + \mu dN - TdS - SdT + PdV + VdP\\
+   &amp;= \mu dN + VdP - SdT
+\end{split}\]</div>
+</details>
+</div>
+<p>We will return to these expressions repeatedly throughout our discussion
+of statistical mechanics, and will discuss thermodynamic relations in
+more detail later in the course. If the importance of natural variables
+is not clear, you can first see that different thermodynamic potentials
+will reach extremum values when different conditions of equilibrium
+occur. For example, a system with impermeable, rigid, diathermal walls
+that reaches thermal equilibrium with the surroundings will have
+constant <span class="math notranslate nohighlight">\(N\)</span>, <span class="math notranslate nohighlight">\(V\)</span>, and <span class="math notranslate nohighlight">\(T\)</span>, and thus the Helmholtz free energy (with
+corresponding natural variables) will reach an extremum value. Analysis
+of the Helmholtz free energy can then be used to understand how changes
+to this system properties affect its equilibrium behavior. We will
+further use the natural variables to connect to statistical mechanics as
+will be discussed in future lectures. For now, we conclude our review of
+thermodynamics.</p>
+</section>
+</section>
+<section id="link-to-shared-notes">
+<h2><a class="reference external" href="https://docs.google.com/document/d/1SsPXEPwoouHbosxXwvN3TYe2cv6kTClK/edit?usp=drive_link&amp;amp;ouid=113272049620170441297&amp;amp;rtpof=true&amp;amp;sd=true">Link to Shared Notes</a><a class="headerlink" href="#link-to-shared-notes" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lecture_files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lecture1A.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Overview</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Lecture2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Postulates of statistical mechanics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-for-today-s-lecture">Goals for today’s lecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-the-system">Description of the system</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-variables">Thermodynamic variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#work-and-heat">Work and heat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work">Work</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat">Heat</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy">Entropy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fundamental-relation-of-thermodynamics">The fundamental relation of thermodynamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugate-variables">Conjugate Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-variables">Natural variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibrium">Equilibrium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-thermodynamic-potentials">Additional thermodynamic potentials</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-to-shared-notes">Link to Shared Notes</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Reid van Lehn, Matt Gebbie, Rose K. Cersonsky
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
